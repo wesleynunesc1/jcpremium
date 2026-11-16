@@ -88,18 +88,20 @@ function initStackPanels() {
   if (!stackPanels.length) return;
 
   function measureStack() {
-    const isMobile = window.innerWidth <= 768;
+    const isMobileOrTablet = window.innerWidth <= 1024;
     const navCompact = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--nav-compact')) || 73;
 
     stackPanels.forEach((panel, i) => {
       panel.style.setProperty('--stack-order', i + 1);
 
-      if (isMobile) {
-        // Safe natural stacking on mobile to avoid content trapping
-        panel.style.setProperty('--sticky-top', '0px');
+      if (isMobileOrTablet) {
+        // Safe natural scrolling on mobile/tablets: disable sticky offset completely
+        panel.style.removeProperty('--sticky-top');
       } else {
-        const topOffset = Math.min(navCompact, window.innerHeight - panel.offsetHeight);
-        panel.style.setProperty('--sticky-top', `${topOffset}px`);
+        // Desktop: anchor cleanly below the fixed compact navigation bar
+        const maxOffset = window.innerHeight - panel.offsetHeight;
+        const topOffset = Math.min(navCompact, maxOffset > 0 ? navCompact : maxOffset);
+        panel.style.setProperty('--sticky-top', `${Math.max(navCompact, topOffset)}px`);
       }
     });
   }
