@@ -1531,7 +1531,7 @@ footer.editorial-footer {
     -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
     padding: 40px 24px 60px;
-    gap: 20px;
+    gap: 16px;
     overflow-y: auto;
     z-index: 999;
   }
@@ -1560,19 +1560,19 @@ footer.editorial-footer {
   }
 
   main > section.hero {
-    grid-template-columns: 1fr;
-    height: auto;
-    min-height: auto;
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 1fr !important;
+    height: auto !important;
+    min-height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
   }
 
   main > section.hero::before {
-    display: none; /* Image renders naturally as architectural backdrop or visual banner */
+    display: none !important;
   }
 
   .hero-inner {
-    padding: 100px 24px 50px;
+    padding: 90px 24px 40px;
     max-width: 100%;
     background: var(--white);
   }
@@ -1591,15 +1591,32 @@ footer.editorial-footer {
   }
 
   .origin-grid,
+  .origin,
   .bespoke-grid,
+  .bespoke,
   .app-tabs-content,
   .countertops-editorial-grid,
   .about-editorial-grid,
   .contact-cta-box {
-    grid-template-columns: 1fr;
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column !important;
     gap: 35px;
+  }
+
+  .bespoke {
+    min-height: auto !important;
+  }
+
+  .bespoke-img {
+    width: 100% !important;
+    min-height: 400px !important;
+    height: clamp(380px, 50vw, 520px) !important;
+  }
+
+  .bespoke-copy {
+    padding: 40px 24px !important;
+    width: 100% !important;
   }
 
   .library-grid {
@@ -1611,11 +1628,6 @@ footer.editorial-footer {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .bespoke-img {
-    height: clamp(400px, 50vw, 560px);
-    min-height: auto;
-  }
-
   .footer-inner {
     grid-template-columns: 1fr 1fr;
     gap: 35px;
@@ -1623,7 +1635,7 @@ footer.editorial-footer {
 }
 
 /* ==========================================================================
-   MOBILE CRITICAL (<= 768px): Natural Smooth Scrolling, No Overlap
+   MOBILE CRITICAL (<= 768px): Natural Smooth Scrolling, Luxury Touch
    ========================================================================== */
 
 @media (max-width: 768px) {
@@ -1634,6 +1646,8 @@ footer.editorial-footer {
     z-index: 1 !important;
     box-shadow: none !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
   }
 
   main > section.dark,
@@ -1641,22 +1655,76 @@ footer.editorial-footer {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
+  main > section.hero {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
   .shell {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* Header Mobile */
+  header.nav {
+    height: 66px;
+    padding: 0 16px;
+  }
+
+  .brand-name {
+    font-size: 19px;
+    letter-spacing: 0.12em;
+  }
+
+  .brand-sub {
+    font-size: 7.5px;
+    letter-spacing: 0.18em;
+  }
+
+  .brand-monogram {
+    width: 28px;
+    height: 28px;
+  }
+
+  .nav-actions {
+    gap: 8px;
+  }
+
+  .lang-switch {
+    padding: 2px;
+    gap: 1px;
+  }
+
+  .lang-btn {
+    padding: 4px 7px;
+    font-size: 10.5px;
+    min-height: 36px;
+  }
+
+  .menu-btn {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 6px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
   }
 
   /* Typography scale */
+  .hero-inner {
+    padding: 85px 20px 35px;
+  }
+
   .hero-inner h1 {
-    font-size: clamp(34px, 8.5vw, 48px);
-    line-height: 1.1;
+    font-size: clamp(32px, 8.2vw, 44px);
+    line-height: 1.12;
     margin-bottom: 16px;
   }
 
   .hero-inner p.hero-desc {
     font-size: 15px;
     line-height: 1.65;
-    margin-bottom: 28px;
+    margin-bottom: 26px;
+    color: #4b4640;
   }
 
   .hero-buttons {
@@ -1670,6 +1738,10 @@ footer.editorial-footer {
     width: 100%;
     min-height: 48px;
     padding: 14px 20px;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    justify-content: center;
+    border-radius: 999px;
   }
 
   /* Section Titles */
@@ -1679,29 +1751,145 @@ footer.editorial-footer {
   .gallery-h-controls h2,
   .bespoke-copy h2,
   .bookmatch-section h2,
+  .bookmatch h2,
   .app-tabs-section h2,
   .countertops-editorial-section h2,
   .about-editorial-copy h2,
   .contact-cta-content h2 {
-    font-size: clamp(30px, 7.5vw, 42px) !important;
+    font-size: clamp(30px, 7.5vw, 40px) !important;
     line-height: 1.18 !important;
   }
 
-  /* Bespoke Section */
-  .bespoke-copy {
-    padding: 35px 20px;
+  /* 08. STONE LIBRARY - Generous Single Column Touch Cards */
+  .library-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .library-card {
+    height: 380px !important;
+    border-radius: 4px;
+  }
+
+  .library-card-caption {
+    padding: 24px 20px !important;
+    background: linear-gradient(180deg, transparent 0%, rgba(24, 23, 21, 0.92) 100%) !important;
+  }
+
+  .library-card-name {
+    font-size: 28px !important;
+  }
+
+  .library-card-action {
+    margin-top: 12px;
+    font-size: 11.5px;
+  }
+
+  /* 09. SOURCING JOURNEY - Refined Grid & Display */
+  .journey-grid {
+    grid-template-columns: 1fr 1fr !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.12) !important;
+  }
+
+  .journey-grid button {
+    height: auto !important;
+    min-height: 100px !important;
+    padding: 16px !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+  }
+
+  .journey-grid b {
+    font-size: 18px !important;
+  }
+
+  .journey-display {
+    margin-top: 24px !important;
+    padding: 20px !important;
+  }
+
+  .journey-display h4 {
+    font-size: 22px !important;
+  }
+
+  .journey-display p {
+    font-size: 14.5px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* 10. STONE GALLERY - Touch-Friendly Swipe & Arrow Controls */
+  .gallery-h-controls {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+    margin-bottom: 24px !important;
+  }
+
+  .gallery-h-arrows {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .gallery-arrow-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  .gallery-slide-card {
+    flex: 0 0 85vw !important;
+    height: 380px !important;
+  }
+
+  /* 11. BESPOKE CAPABILITIES - RECONSTRUÇÃO VERTICAL OBRIGATÓRIA */
+  .bespoke {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: auto !important;
   }
 
   .bespoke-img {
-    height: 380px;
+    order: 1;
+    width: 100% !important;
+    height: 360px !important;
+    min-height: auto !important;
+    position: relative !important;
   }
 
-  /* Bookmatch Simulator */
+  .bespoke-copy {
+    order: 2;
+    padding: 35px 20px 45px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+
+  .bespoke-list {
+    margin: 20px 0 !important;
+    padding-top: 16px !important;
+    gap: 14px !important;
+  }
+
+  .bespoke-list li {
+    font-size: 14.5px !important;
+    line-height: 1.5 !important;
+    color: #e5e0d7 !important;
+  }
+
+  .bespoke-copy .btn-editorial-light {
+    width: 100% !important;
+    min-height: 48px;
+    display: flex;
+    justify-content: center;
+    border-radius: 999px;
+  }
+
+  /* 12. BOOKMATCH SIMULATOR */
   .pattern-choices {
-    gap: 8px;
+    gap: 10px;
     overflow-x: auto;
     justify-content: flex-start;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
   }
@@ -1712,27 +1900,34 @@ footer.editorial-footer {
 
   .pattern-choice {
     flex: 0 0 auto;
-    padding: 6px 10px;
-    font-size: 10px;
+    padding: 8px 12px;
+    font-size: 11px;
     min-height: 44px;
   }
 
   .match-controls {
     flex-direction: column;
     gap: 8px;
+    width: 100%;
   }
 
   .match-controls button {
     width: 100%;
     min-height: 44px;
+    font-size: 11px;
+    border-radius: 999px;
   }
 
-  /* App Tabs Section */
+  .match-view {
+    aspect-ratio: 16 / 12 !important;
+  }
+
+  /* 13. STONE APPLICATIONS TABS */
   .app-tabs-nav {
     overflow-x: auto;
     flex-wrap: nowrap;
-    gap: 14px;
-    padding-bottom: 8px;
+    gap: 12px;
+    padding-bottom: 10px;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
   }
@@ -1744,27 +1939,158 @@ footer.editorial-footer {
   .app-tab-btn {
     flex: 0 0 auto;
     min-height: 44px;
+    padding: 8px 16px;
+    font-size: 12px;
     display: inline-flex;
     align-items: center;
   }
 
   .app-feature-media {
     height: 280px;
+    width: 100%;
   }
 
-  /* Samples Stack in About */
-  .samples-stack {
-    position: static;
-    margin-top: 24px;
-    display: flex;
+  .app-feature-info {
+    padding: 0 !important;
+  }
+
+  .app-feature-info h3 {
+    font-size: 26px !important;
+    color: var(--white) !important;
+  }
+
+  .app-feature-info p {
+    font-size: 15px !important;
+    color: #e5e0d7 !important;
+    line-height: 1.65 !important;
+  }
+
+  .app-feature-info .btn-editorial-light {
+    width: 100% !important;
+    min-height: 48px;
     justify-content: center;
-    gap: 12px;
+    border-radius: 999px;
+  }
+
+  /* 14. COUNTERTOP SERVICES - Enhanced Contrast & Legibility */
+  .countertops-editorial-section .lead {
+    color: #f1ede4 !important;
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+  }
+
+  .countertops-editorial-list {
+    margin: 24px 0 !important;
+    gap: 16px !important;
+  }
+
+  .countertops-editorial-list .num {
+    color: var(--gold) !important;
+    font-size: 18px !important;
+  }
+
+  .countertops-editorial-list .title {
+    color: #ffffff !important;
+    font-size: 16px !important;
+  }
+
+  .countertops-editorial-list .desc {
+    color: #d1ccc2 !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+
+  .countertops-editorial-section .btn-editorial-light {
+    width: 100% !important;
+    min-height: 48px;
+    justify-content: center;
+    border-radius: 999px;
+  }
+
+  /* 16. ABOUT JC PREMIUM - Contrast & Samples Stack */
+  .about-editorial-copy .lead {
+    color: #f5f1ea !important;
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+  }
+
+  .about-editorial-copy p {
+    color: #d4cfc5 !important;
+    font-size: 14.5px !important;
+    line-height: 1.65 !important;
+  }
+
+  .samples-stack {
+    position: static !important;
+    margin-top: 24px !important;
+    display: flex !important;
+    justify-content: center !important;
+    gap: 14px !important;
   }
 
   .sample-tile {
-    width: 90px;
-    height: 120px;
+    width: 90px !important;
+    height: 120px !important;
     transform: none !important;
+  }
+
+  .medallion-wrap {
+    margin-top: 24px !important;
+    padding: 16px 18px !important;
+  }
+
+  /* 17. CONTACT & FOOTER */
+  .contact-cta-box {
+    padding: 35px 20px !important;
+    text-align: center;
+    align-items: center;
+  }
+
+  .contact-cta-box .btn-editorial {
+    width: 100% !important;
+    min-height: 48px;
+    justify-content: center;
+    border-radius: 999px;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .footer-col h5 {
+    margin-bottom: 14px !important;
+    font-size: 12px !important;
+    color: #ffffff !important;
+  }
+
+  .footer-col ul a,
+  .footer-col p {
+    font-size: 14px !important;
+    color: #cfcac0 !important;
+  }
+
+  .footer-col a[href^="tel:"] {
+    font-size: 15px !important;
+    color: var(--gold) !important;
+    display: inline-block;
+    padding: 4px 0;
+  }
+
+  .footer-col .btn-editorial-light {
+    width: 100%;
+    min-height: 44px;
+    justify-content: center;
+    border-radius: 999px;
+  }
+
+  .footer-bottom {
+    flex-direction: column !important;
+    gap: 10px !important;
+    text-align: center !important;
+    font-size: 12px !important;
+    color: #a9a59e !important;
   }
 
   /* Modal Sheet Full Mobile Fit */
@@ -1805,58 +2131,44 @@ footer.editorial-footer {
 @media (max-width: 480px) {
   header.nav {
     height: 64px;
-    padding: 0 16px;
+    padding: 0 14px;
   }
 
   .brand-name {
-    font-size: 18px;
+    font-size: 17px;
     letter-spacing: 0.12em;
   }
 
   .brand-sub {
-    font-size: 7px;
-    letter-spacing: 0.18em;
+    font-size: 6.5px;
+    letter-spacing: 0.16em;
   }
 
   .brand-monogram {
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
   }
 
   .lang-btn {
     padding: 3px 6px;
     font-size: 10px;
-  }
-
-  .library-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .library-card {
-    height: 320px;
+    min-height: 34px;
   }
 
   .journey-grid {
-    grid-template-columns: 1fr;
-    border-left: 1px solid #76736d;
-    border-top: 1px solid #76736d;
+    grid-template-columns: 1fr !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
   }
 
   .journey-grid button {
-    height: auto;
-    min-height: 90px;
-    padding: 16px;
+    height: auto !important;
+    min-height: 80px !important;
+    padding: 14px !important;
   }
 
-  .footer-inner {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    gap: 12px;
-    text-align: center;
+  .journey-grid b {
+    font-size: 17px !important;
   }
 }
 
