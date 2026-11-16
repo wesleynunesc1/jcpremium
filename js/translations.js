@@ -23,7 +23,7 @@ const DICT = {
     hero_h1_italic: "Your Vision.",
     hero_desc: "Independent natural and engineered stone sourcing for projects across the United States, complemented by specialized countertop services in South Florida.",
     hero_cta_explore: "EXPLORE OUR COLLECTION",
-    hero_cta_text_us: "TEXT US ABOUT YOUR PROJECT →",
+    hero_cta_text_us: "DISCUSS YOUR PROJECT VIA TEXT →",
 
     // Origin
     origin_kicker: "01 / STONE SOURCING",
@@ -140,7 +140,7 @@ const DICT = {
     contact_kicker: "10 / INQUIRY",
     contact_h2: "Have a project in mind?",
     contact_lead: "Whether sourcing raw slabs across the U.S. or executing custom countertops in South Florida, our specialists are ready to guide your selection.",
-    contact_cta: "SEND VIA SMS →",
+    contact_cta: "CONTINUE VIA SMS →",
 
     // Modal & Direct SMS
     modal_kicker: "GET IN TOUCH VIA TEXT",
@@ -195,7 +195,7 @@ const DICT = {
     hero_h1_italic: "Su Visión.",
     hero_desc: "Suministro e intermediación independiente de piedras naturales e industrializadas para proyectos en todo Estados Unidos, complementado con servicios especializados de encimeras en el sur de Florida.",
     hero_cta_explore: "EXPLORAR COLECCIÓN",
-    hero_cta_text_us: "ENVÍENOS UN SMS SOBRE SU PROYECTO →",
+    hero_cta_text_us: "CONSULTAR PROYECTO POR SMS →",
 
     // Origin
     origin_kicker: "01 / SUMINISTRO DE PIEDRAS",
@@ -312,7 +312,7 @@ const DICT = {
     contact_kicker: "10 / CONSULTA",
     contact_h2: "¿Tiene un proyecto en mente?",
     contact_lead: "Ya sea para el suministro de chapas en todo el territorio de EE.UU. o para la fabricación de encimeras en el sur de Florida, nuestros especialistas están listos para asesorarle.",
-    contact_cta: "ENVIAR POR SMS →",
+    contact_cta: "CONTINUAR POR SMS →",
 
     // Modal & Direct SMS
     modal_kicker: "CONTACTO POR MENSAJE DE TEXTO",

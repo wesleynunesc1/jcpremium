@@ -30,6 +30,7 @@ function initLanguageSwitcher() {
   function setLanguage(lang) {
     if (!DICT || !DICT[lang]) return;
     currentLanguage = lang;
+    document.documentElement.lang = lang;
 
     // Update active button state
     langButtons.forEach(btn => {
@@ -53,22 +54,32 @@ function initLanguageSwitcher() {
     // Refresh active stage in journey grid if present
     const activeJourneyBtn = document.querySelector('#journey-grid button.active');
     if (activeJourneyBtn) {
+      const step = activeJourneyBtn.dataset.step || '1';
       const stageNameEl = document.getElementById('stage-name');
       const stageDescEl = document.getElementById('stage-description');
       if (stageNameEl && stageDescEl) {
-        stageNameEl.textContent = activeJourneyBtn.querySelector('b')?.textContent || '';
-        stageDescEl.textContent = activeJourneyBtn.dataset.detail || '';
+        stageNameEl.textContent = DICT[lang][`j${step}_title`] || '';
+        stageDescEl.textContent = DICT[lang][`j${step}_desc`] || '';
       }
     }
 
     // Refresh active app tab text
     const activeAppBtn = document.querySelector('#app-tabs button.active');
     if (activeAppBtn) {
+      const tabKey = activeAppBtn.dataset.tab;
       const appLabelEl = document.getElementById('app-label');
       const appTextEl = document.getElementById('app-text');
-      if (appLabelEl && appTextEl) {
-        appLabelEl.textContent = activeAppBtn.dataset.label;
-        appTextEl.textContent = activeAppBtn.dataset.text;
+      if (appLabelEl && appTextEl && tabKey) {
+        const shortMap = {
+          residential: 'res',
+          hospitality: 'hosp',
+          bathrooms: 'bath',
+          kitchens: 'kit',
+          commercial: 'comm'
+        };
+        const prefix = shortMap[tabKey] || tabKey;
+        appLabelEl.textContent = DICT[lang][`app_${prefix}_title`] || activeAppBtn.dataset.label;
+        appTextEl.textContent = DICT[lang][`app_${prefix}_text`] || activeAppBtn.dataset.text;
       }
     }
   }
@@ -170,11 +181,10 @@ function initJourneyGrid() {
       document.querySelector('#journey-grid .active')?.classList.remove('active');
       btn.classList.add('active');
 
-      const name = btn.querySelector('b')?.textContent || '';
-      const detail = btn.dataset.detail || '';
-
-      stageName.textContent = name;
-      stageDesc.textContent = detail;
+      const step = btn.dataset.step || '1';
+      const lang = currentLanguage || 'en';
+      stageName.textContent = (DICT[lang] && DICT[lang][`j${step}_title`]) || btn.querySelector('b')?.textContent || '';
+      stageDesc.textContent = (DICT[lang] && DICT[lang][`j${step}_desc`]) || '';
     });
   });
 }
@@ -318,6 +328,14 @@ function initAppTabs() {
 
   if (!tabs.length || !labelEl || !textEl || !imgEl) return;
 
+  const shortMap = {
+    residential: 'res',
+    hospitality: 'hosp',
+    bathrooms: 'bath',
+    kitchens: 'kit',
+    commercial: 'comm'
+  };
+
   tabs.forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelector('#app-tabs .active')?.classList.remove('active');
@@ -325,10 +343,14 @@ function initAppTabs() {
 
       imgEl.style.opacity = '0';
       setTimeout(() => {
-        labelEl.textContent = btn.dataset.label;
-        textEl.textContent = btn.dataset.text;
+        const lang = currentLanguage || 'en';
+        const tabKey = btn.dataset.tab;
+        const prefix = shortMap[tabKey] || tabKey;
+        
+        labelEl.textContent = (DICT[lang] && DICT[lang][`app_${prefix}_title`]) || btn.dataset.label;
+        textEl.textContent = (DICT[lang] && DICT[lang][`app_${prefix}_text`]) || btn.dataset.text;
         imgEl.src = btn.dataset.image;
-        imgEl.alt = `${btn.dataset.label} stone concept`;
+        imgEl.alt = `${labelEl.textContent} stone concept`;
         imgEl.style.opacity = '1';
       }, 150);
     });
