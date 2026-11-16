@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="230" viewBox="0 0 1000 230" role="img" aria-label="JC Premium LLC — Stone Supply, Brokerage and Countertops">
+ <title>JC Premium LLC</title>
+ <g transform="translate(18,34) scale(1.23)"><g transform="translate(14,5)">
+ <rect x="7" y="5" width="111" height="111" rx="2" fill="none" stroke="#D5B37A" stroke-width="1.7" />
+ <path d="M 31 28 L 70 28 M 60 28 L 60 72 C 60 86 52 94 39 94 C 27 94 20 88 17 80" fill="none" stroke="#192733" stroke-width="11" stroke-linecap="square" stroke-linejoin="round"/>
+ <path d="M 103 36 C 96 29 86 28 78 33 C 66 40 67 74 80 85 C 88 92 98 88 104 81" fill="none" stroke="#192733" stroke-width="11" stroke-linecap="square"/>
+ <path d="M 75 21 L 65 37 L 71 42 L 64 62 L 73 69 L 66 84" fill="none" stroke="#D5B37A" stroke-width="2.6" opacity=".84" stroke-linejoin="round"/>
+ </g></g>
+ <g transform="translate(224,0)">
+ <text x="0" y="112" font-family="Lato, Arial, sans-serif" font-weight="800" font-size="72" letter-spacing="6" fill="#192733">JC PREMIUM</text>
+ <line x1="2" y1="132" x2="695" y2="132" stroke="#D5B37A" stroke-width="2"/>
+ <text x="2" y="170" font-family="Lato, Arial, sans-serif" font-weight="600" font-size="19" letter-spacing="3.3" fill="#56616A">STONE SUPPLY  ·  BROKERAGE  ·  COUNTERTOPS</text>
+ <text x="3" y="199" font-family="Lato, Arial, sans-serif" font-weight="700" font-size="12" letter-spacing="4.1" fill="#D5B37A">JC PREMIUM LLC</text>
+ </g></svg>

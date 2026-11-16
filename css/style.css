@@ -1,0 +1,1546 @@
+/* ==========================================================================
+   JC PREMIUM LLC — GOLUBEV STONE LUXURY EDITORIAL EXPERIENCE
+   ========================================================================== */
+
+:root {
+  /* Golubev Luxury Stone Palette */
+  --ivory: #efece6;
+  --white: #faf9f6;
+  --stone: #cfc4b4;
+  --char: #181715;
+  --brown: #29231f;
+  --muted: #716d67;
+  --rule: #cfcac1;
+  --gold: #A88A5D;
+  --gold-hover: #c4a574;
+  --gold-glow: rgba(168, 138, 93, 0.25);
+
+  /* Navigation Dimensions */
+  --nav-rest: 78px;
+  --nav-compact: 73px;
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: 'Italiana', Georgia, serif;
+
+  /* Stacked Panels default */
+  --stack-order: 1;
+  --sticky-top: 0px;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-cinematic: 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  background-color: var(--white);
+  color: var(--char);
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--white);
+  color: var(--char);
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  color: inherit;
+}
+
+/* ==========================================================================
+   04. SISTEMA PRINCIPAL DE SCROLL — STACKED PANELS
+   ========================================================================== */
+
+main {
+  position: relative;
+  width: 100%;
+  overflow-x: clip;
+}
+
+main > section {
+  position: sticky !important;
+  top: var(--sticky-top, 0px);
+  z-index: var(--stack-order, 1);
+  width: 100vw;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  box-shadow: 0 -18px 45px rgba(24, 23, 21, 0.12);
+  background-color: var(--ivory);
+  isolation: isolate;
+  will-change: transform;
+}
+
+main > section.dark {
+  background-color: var(--char);
+  color: var(--white);
+  box-shadow: 0 -22px 55px rgba(0, 0, 0, 0.55);
+}
+
+main > section.hero {
+  background-color: var(--white);
+  box-shadow: none;
+}
+
+main > section.warm-dark {
+  background-color: var(--brown);
+  color: #f1e8da;
+  box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.5);
+}
+
+main > section.light-stone {
+  background-color: #e5e0d7;
+}
+
+main > section[id] {
+  scroll-margin-top: calc(var(--nav-rest) + 12px);
+}
+
+.shell {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(24px, 5vw, 70px);
+  padding-right: clamp(24px, 5vw, 70px);
+}
+
+/* ==========================================================================
+   TYPOGRAPHY & EDITORIAL ELEMENTS
+   ========================================================================== */
+
+.kicker {
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.dark .kicker {
+  color: #c4beb5;
+}
+
+.kicker::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background-color: currentColor;
+}
+
+h1, h2, h3, .serif-headline {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+.display-font {
+  font-family: var(--font-display);
+}
+
+.lead {
+  font-size: clamp(17px, 1.15vw, 20px);
+  color: #55504a;
+  line-height: 1.75;
+}
+
+.dark .lead {
+  color: #cfcac0;
+}
+
+.italic-serif {
+  font-style: italic;
+  color: var(--gold);
+}
+
+/* Minimalist Editorial Buttons */
+.btn-editorial {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border: 1px solid var(--char);
+  background: var(--char);
+  color: var(--white);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-editorial:hover {
+  background: transparent;
+  color: var(--char);
+}
+
+.btn-editorial-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border: 1px solid var(--white);
+  background: var(--white);
+  color: var(--char);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-editorial-light:hover {
+  background: transparent;
+  color: var(--white);
+}
+
+.btn-editorial-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border: 1px solid var(--char);
+  background: transparent;
+  color: var(--char);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-editorial-outline:hover {
+  background: var(--char);
+  color: var(--white);
+}
+
+.editorial-arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--char);
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--char);
+  transition: all var(--transition-fast);
+}
+
+.dark .editorial-arrow-link {
+  color: var(--white);
+  border-bottom-color: var(--white);
+}
+
+.editorial-arrow-link:hover {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+  gap: 18px;
+}
+
+/* ==========================================================================
+   05. HEADER — REPRODUÇÃO DA EXPERIÊNCIA
+   ========================================================================== */
+
+header.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-rest);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(20px, 4vw, 60px);
+  background: var(--char);
+  color: var(--white);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: height var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+header.nav.is-compact {
+  height: var(--nav-compact);
+  background: rgba(24, 23, 21, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity var(--transition-fast);
+}
+
+.nav-brand:hover {
+  opacity: 0.9;
+}
+
+.brand-monogram {
+  width: 32px;
+  height: 32px;
+}
+
+.brand-editorial-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  font-size: 24px;
+  line-height: 0.9;
+  letter-spacing: 0.16em;
+  color: var(--white);
+  white-space: nowrap;
+}
+
+.brand-sub {
+  font-family: var(--font-sans);
+  font-size: 8px;
+  line-height: 1;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 5px;
+}
+
+.navlinks {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navlinks a {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #cfcac1;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.navlinks a:hover,
+.navlinks a.active {
+  color: var(--white);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ==========================================================================
+   LANGUAGE SWITCHER (US & ES FLAGS)
+   ========================================================================== */
+
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  border-radius: 16px;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #a9a59e;
+  transition: all var(--transition-fast);
+}
+
+.lang-btn .flag-icon {
+  width: 16px;
+  height: 12px;
+  border-radius: 1px;
+  object-fit: cover;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+
+.lang-btn.active {
+  background: var(--gold);
+  color: var(--char);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.lang-btn:hover:not(.active) {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+/* ==========================================================================
+   06. HERO — FULLSCREEN STONE EXPERIENCE
+   ========================================================================== */
+
+main > section.hero {
+  min-height: calc(100svh - 78px);
+  height: calc(100svh - 78px);
+  max-height: 1050px;
+  position: relative;
+  overflow: clip;
+  display: grid;
+  grid-template-columns: 48% 52%;
+  isolation: isolate;
+  background: var(--white);
+}
+
+main > section.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 48%;
+  background: rgba(250, 249, 246, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 3;
+  padding: clamp(40px, 5vw, 85px) clamp(28px, 4.5vw, 75px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 660px;
+}
+
+.hero-inner .kicker {
+  margin-bottom: 18px;
+}
+
+.hero-inner h1 {
+  font-size: clamp(42px, 4.8vw, 76px);
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  margin-bottom: 22px;
+}
+
+.hero-inner p.hero-desc {
+  font-size: clamp(16px, 1.1vw, 18px);
+  color: #4b4640;
+  line-height: 1.7;
+  margin-bottom: 35px;
+  max-width: 540px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-visual {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ==========================================================================
+   07. STONE ORIGIN — SEÇÃO EDITORIAL
+   ========================================================================== */
+
+.origin-section {
+  padding-top: clamp(80px, 9vw, 135px);
+  padding-bottom: clamp(80px, 9vw, 135px);
+}
+
+.origin-grid {
+  display: grid;
+  grid-template-columns: 0.88fr 1.12fr;
+  gap: clamp(40px, 6vw, 100px);
+  align-items: center;
+}
+
+.origin-copy h2 {
+  font-size: clamp(38px, 4vw, 64px);
+  line-height: 1.15;
+  margin: 24px 0 20px;
+}
+
+.origin-copy p {
+  max-width: 540px;
+  font-size: 17px;
+  color: #4b4640;
+  line-height: 1.75;
+  margin-bottom: 35px;
+}
+
+.origin-media,
+.origin figure {
+  margin: 0;
+  height: clamp(480px, 45vw, 650px);
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(24, 23, 21, 0.12);
+}
+
+.origin-media img,
+.origin figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform var(--transition-cinematic);
+}
+
+.origin-media:hover img,
+.origin figure:hover img {
+  transform: scale(1.03);
+}
+
+/* ==========================================================================
+   08. STONE LIBRARY — CATÁLOGO FOTOGRÁFICO
+   ========================================================================== */
+
+.library-section,
+.library {
+  padding-top: clamp(75px, 8vw, 115px);
+  padding-bottom: clamp(75px, 8vw, 125px);
+}
+
+.library-header {
+  margin-bottom: 50px;
+}
+
+.library-header h2 {
+  font-size: clamp(38px, 4.2vw, 64px);
+  line-height: 1.15;
+  margin-top: 12px;
+}
+
+.library-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+
+.library-card {
+  height: clamp(340px, 30vw, 440px);
+  position: relative;
+  overflow: hidden;
+  background: #c9c8c3;
+  cursor: pointer;
+}
+
+.library-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.library-card:hover img {
+  transform: scale(1.06);
+}
+
+.library-card-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 20px;
+  background: linear-gradient(180deg, transparent 0%, rgba(24, 23, 21, 0.85) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: var(--white);
+}
+
+.library-card-num {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+
+.library-card-name {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+/* ==========================================================================
+   09. SOURCING JOURNEY — PROCESSO INTERATIVO
+   ========================================================================== */
+
+.journey-section {
+  padding-top: clamp(80px, 9vw, 135px);
+  padding-bottom: clamp(80px, 9vw, 135px);
+}
+
+.journey-section h2 {
+  font-size: clamp(38px, 4.2vw, 64px);
+  line-height: 1.15;
+  margin: 16px 0 35px;
+}
+
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid #76736d;
+  border-left: 1px solid #76736d;
+}
+
+.journey-grid button {
+  height: 180px;
+  background: none;
+  border: 0;
+  border-right: 1px solid #76736d;
+  border-bottom: 1px solid #76736d;
+  color: inherit;
+  text-align: left;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.journey-grid button:hover,
+.journey-grid button.active {
+  background: #45413d;
+}
+
+.journey-grid small {
+  font-size: 11px;
+  color: #a9a59e;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.journey-grid b {
+  font-weight: 400;
+  font-family: var(--font-display);
+  font-size: 24px;
+  line-height: 1.15;
+  color: var(--white);
+}
+
+.journey-display {
+  margin-top: 40px;
+  padding: 30px;
+  background: #23201d;
+  border-left: 2px solid var(--gold);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.journey-display h4 {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  color: var(--white);
+}
+
+.journey-display p {
+  color: #b7b2a9;
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+/* ==========================================================================
+   10. STONE GALLERY — SCROLL HORIZONTAL & VIDEO CINEMATIC
+   ========================================================================== */
+
+.gallery-horizontal-section {
+  padding-top: clamp(80px, 9vw, 130px);
+  padding-bottom: clamp(80px, 9vw, 130px);
+  overflow: hidden;
+}
+
+.gallery-h-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.gallery-h-arrows {
+  display: flex;
+  gap: 12px;
+}
+
+.gallery-arrow-btn {
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--char);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.gallery-arrow-btn:hover {
+  background: var(--char);
+  color: var(--white);
+}
+
+.gallery-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 20px;
+  scrollbar-width: none;
+}
+
+.gallery-track::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-slide-card {
+  flex: 0 0 clamp(320px, 45vw, 640px);
+  height: clamp(380px, 40vw, 520px);
+  scroll-snap-align: start;
+  position: relative;
+  overflow: hidden;
+  background: #24211f;
+}
+
+.gallery-slide-card img,
+.gallery-slide-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-slide-card .slide-tag {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  padding: 6px 14px;
+  background: rgba(24, 23, 21, 0.8);
+  backdrop-filter: blur(8px);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+/* ==========================================================================
+   11. CUSTOM STONE APPLICATIONS — CARROSSEL CINEMATOGRÁFICO
+   ========================================================================== */
+
+.bespoke-section,
+.bespoke {
+  min-height: 740px;
+}
+
+.bespoke-grid,
+.bespoke {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+.bespoke-img {
+  min-height: 740px;
+  height: 740px;
+  position: relative;
+  overflow: hidden;
+  background: #24211f;
+}
+
+.bespoke-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1), transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.bespoke-slide.active {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.bespoke-slide.leaving {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.bespoke-slide-ui {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 5;
+  color: var(--white);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.bespoke-copy {
+  padding: clamp(45px, 6vw, 110px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bespoke-copy h2,
+.bespoke h2 {
+  font-size: clamp(38px, 4.2vw, 68px);
+  line-height: 1.15;
+  margin: 24px 0;
+}
+
+.bespoke-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 30px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 24px;
+}
+
+.bespoke-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: #cfcac1;
+}
+
+.bespoke-list li::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+}
+
+/* ==========================================================================
+   12. BOOKMATCH & QUADMATCH — SIMULADOR INTERATIVO
+   ========================================================================== */
+
+.bookmatch-section,
+.bookmatch {
+  padding-top: clamp(80px, 9vw, 135px);
+  padding-bottom: clamp(80px, 9vw, 145px);
+  text-align: center;
+}
+
+.bookmatch-section h2,
+.bookmatch h2 {
+  font-size: clamp(38px, 4.5vw, 68px);
+  line-height: 1.15;
+  max-width: 900px;
+  margin: 18px auto 24px;
+}
+
+.bookmatch-section .lead,
+.bookmatch .lead {
+  max-width: 640px;
+  margin: 0 auto 40px;
+}
+
+.pattern-choices {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+.pattern-choice {
+  background: none;
+  border: 1px solid var(--rule);
+  padding: 6px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: all var(--transition-fast);
+}
+
+.pattern-choice img {
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.pattern-choice.active,
+.pattern-choice:hover {
+  border-color: var(--char);
+  background: var(--char);
+  color: var(--white);
+}
+
+.match-controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.match-controls button {
+  padding: 10px 22px;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border: 1px solid var(--char);
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.match-controls button.active {
+  background: var(--char);
+  color: var(--white);
+}
+
+.match-stage-wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 1px solid var(--rule);
+  background: #24211f;
+  box-shadow: 0 25px 60px rgba(24, 23, 21, 0.15);
+}
+
+.match-view {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  display: flex;
+  overflow: hidden;
+  transition: all var(--transition-smooth);
+}
+
+.match-half {
+  flex: 1;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.4s ease;
+}
+
+.match-half:nth-child(2) {
+  transform: scaleX(-1);
+}
+
+/* Quadmatch Mode */
+.match-view.quad {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.match-view.quad .match-half {
+  width: 100%;
+  height: 100%;
+}
+
+.match-view.quad .match-half:nth-child(1) {
+  transform: none;
+}
+
+.match-view.quad .match-half:nth-child(2) {
+  transform: scaleX(-1);
+}
+
+.match-view.quad .match-half:nth-child(3) {
+  transform: scaleY(-1);
+}
+
+.match-view.quad .match-half:nth-child(4) {
+  transform: scale(-1, -1);
+}
+
+/* ==========================================================================
+   13. STONE APPLICATIONS — TABS INTERATIVAS
+   ========================================================================== */
+
+.app-tabs-section {
+  padding-top: clamp(80px, 9vw, 135px);
+  padding-bottom: clamp(80px, 9vw, 135px);
+}
+
+.app-tabs-nav {
+  display: flex;
+  gap: 18px;
+  border-bottom: 1px solid #76736d;
+  margin-bottom: 45px;
+  flex-wrap: wrap;
+}
+
+.app-tab-btn {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 12px 6px;
+  color: #a9a59e;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.app-tab-btn.active,
+.app-tab-btn:hover {
+  color: var(--white);
+  border-bottom-color: var(--gold);
+}
+
+.app-tabs-content {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: center;
+}
+
+.app-feature-media {
+  height: clamp(420px, 42vw, 600px);
+  overflow: hidden;
+  background: #24211f;
+}
+
+.app-feature-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease;
+}
+
+.app-feature-info h3 {
+  font-size: clamp(34px, 3.8vw, 56px);
+  line-height: 1.18;
+  margin-bottom: 18px;
+}
+
+.app-feature-info p {
+  font-size: 17px;
+  color: #cfcac1;
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+/* ==========================================================================
+   14. COUNTERTOP SERVICES (South Florida Specialists)
+   ========================================================================== */
+
+.countertops-editorial-section {
+  padding-top: clamp(80px, 9vw, 135px);
+  padding-bottom: clamp(80px, 9vw, 135px);
+}
+
+.countertops-editorial-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: clamp(40px, 6vw, 90px);
+  align-items: center;
+}
+
+.countertops-editorial-list {
+  list-style: none;
+  margin: 35px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 25px;
+}
+
+.countertops-editorial-list li {
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 16px;
+}
+
+.countertops-editorial-list .num {
+  font-family: var(--font-display);
+  font-size: 18px;
+  color: var(--gold);
+}
+
+.countertops-editorial-list .title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.countertops-editorial-list .desc {
+  font-size: 14px;
+  color: #a9a59e;
+  margin-top: 2px;
+}
+
+/* ==========================================================================
+   16. ABOUT JC PREMIUM & 18. STONE SAMPLES & MEDALLION
+   ========================================================================== */
+
+.about-editorial-section {
+  padding-top: clamp(80px, 9vw, 140px);
+  padding-bottom: clamp(80px, 9vw, 140px);
+}
+
+.about-editorial-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
+  gap: clamp(40px, 6vw, 90px);
+  align-items: start;
+}
+
+.about-editorial-media {
+  position: relative;
+}
+
+.about-editorial-media img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+}
+
+/* 18. Stone Samples stack */
+.samples-stack {
+  position: absolute;
+  bottom: -40px;
+  right: -30px;
+  display: flex;
+  gap: 10px;
+  perspective: 1000px;
+}
+
+.sample-tile {
+  width: 110px;
+  height: 140px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 2px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+  cursor: pointer;
+}
+
+.sample-tile:nth-child(1) { transform: rotate(-8deg) translateY(10px); }
+.sample-tile:nth-child(2) { transform: rotate(4deg) translateY(-5px); z-index: 2; }
+.sample-tile:nth-child(3) { transform: rotate(12deg) translateY(15px); }
+
+.sample-tile:hover {
+  transform: translateY(-25px) scale(1.08) !important;
+  box-shadow: 0 25px 50px rgba(168, 138, 93, 0.4);
+  z-index: 10;
+}
+
+/* 18. Medallion JC */
+.medallion-wrap {
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 24px;
+  background: rgba(255, 255, 255, 0.04);
+  border-left: 2px solid var(--gold);
+}
+
+.jc-medallion {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #e2c99a, #a88a5d 65%, #6e5531);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.jc-medallion:hover {
+  transform: rotateY(180deg) scale(1.1);
+}
+
+.jc-medallion span {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--char);
+  letter-spacing: 0.05em;
+}
+
+/* ==========================================================================
+   17. CONTACT — MODAL E WHATSAPP
+   ========================================================================== */
+
+.contact-editorial-section {
+  padding-top: clamp(80px, 9vw, 135px);
+  padding-bottom: clamp(80px, 9vw, 135px);
+  background: var(--white);
+}
+
+.contact-cta-box {
+  border: 1px solid var(--rule);
+  padding: clamp(40px, 6vw, 90px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background: var(--ivory);
+}
+
+.contact-cta-content h2 {
+  font-size: clamp(36px, 4.2vw, 64px);
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
+/* Contact Modal Overlay */
+.contact-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(24, 23, 21, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-smooth), visibility var(--transition-smooth);
+}
+
+.contact-modal-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.contact-modal-sheet {
+  background: var(--ivory);
+  width: 100%;
+  max-width: 780px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: clamp(32px, 5vw, 55px);
+  position: relative;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+  border: 1px solid var(--rule);
+  transform: translateY(20px);
+  transition: transform var(--transition-smooth);
+}
+
+.contact-modal-overlay.open .contact-modal-sheet {
+  transform: translateY(0);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: none;
+  border: none;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--char);
+}
+
+.modal-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.modal-form-grid .full {
+  grid-column: span 2;
+}
+
+.modal-input,
+.modal-select,
+.modal-textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: var(--white);
+  border: 1px solid var(--rule);
+  font-size: 14px;
+  color: var(--char);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.modal-input:focus,
+.modal-select:focus,
+.modal-textarea:focus {
+  border-color: var(--char);
+}
+
+.modal-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* ==========================================================================
+   FOOTER EDITORIAL
+   ========================================================================== */
+
+footer.editorial-footer {
+  background: var(--char);
+  color: #a9a59e;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  z-index: 50;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 50px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-col h5 {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 22px;
+}
+
+.footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-col ul a {
+  font-size: 13px;
+  color: #a9a59e;
+}
+
+.footer-col ul a:hover {
+  color: var(--white);
+}
+
+.footer-bottom {
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE & BREAKPOINTS
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .navlinks {
+    display: none;
+  }
+
+  .navlinks.open {
+    display: flex;
+    position: fixed;
+    top: var(--nav-rest);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--char);
+    flex-direction: column;
+    padding: 60px 30px;
+    gap: 24px;
+    overflow-y: auto;
+    z-index: 999;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  main > section.hero {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: auto;
+  }
+
+  main > section.hero::before {
+    width: 100%;
+  }
+
+  .origin,
+  .origin-grid,
+  .bespoke,
+  .bespoke-grid,
+  .app-tabs-content,
+  .countertops-editorial-grid,
+  .about-editorial-section,
+  .about-editorial-grid,
+  .contact-cta-box {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .library-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .journey-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+  }
+}
+
+@media (max-width: 640px) {
+  .library-grid,
+  .journey-grid,
+  .modal-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-form-grid .full {
+    grid-column: span 1;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .samples-stack {
+    position: static;
+    margin-top: 20px;
+    justify-content: center;
+  }
+}
+
+/* Reduced Motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="600" viewBox="0 0 620 600" role="img" aria-label="JC Premium LLC concept logo">
+<title>JC Premium LLC — provisional concept</title>
+<g transform="translate(225,40) scale(1.24)"><g transform="translate(14,5)">
+ <rect x="7" y="5" width="111" height="111" rx="2" fill="none" stroke="#D9BC82" stroke-width="1.7" />
+ <path d="M 31 28 L 70 28 M 60 28 L 60 72 C 60 86 52 94 39 94 C 27 94 20 88 17 80" fill="none" stroke="#F9F7F2" stroke-width="11" stroke-linecap="square" stroke-linejoin="round"/>
+ <path d="M 103 36 C 96 29 86 28 78 33 C 66 40 67 74 80 85 C 88 92 98 88 104 81" fill="none" stroke="#F9F7F2" stroke-width="11" stroke-linecap="square"/>
+ <path d="M 75 21 L 65 37 L 71 42 L 64 62 L 73 69 L 66 84" fill="none" stroke="#D9BC82" stroke-width="2.6" opacity=".84" stroke-linejoin="round"/>
+ </g></g>
+<text x="310" y="325" text-anchor="middle" font-family="Lato, Arial, sans-serif" font-size="63" letter-spacing="4.1" font-weight="800" fill="#F9F7F2">JC PREMIUM</text>
+<line x1="92" y1="349" x2="528" y2="349" stroke="#D5B37A" stroke-width="2"/>
+<text x="310" y="391" text-anchor="middle" font-family="Lato, Arial, sans-serif" font-size="16.4" letter-spacing="2" fill="#D9D7D0">STONE SUPPLY · BROKERAGE</text>
+<text x="310" y="419" text-anchor="middle" font-family="Lato, Arial, sans-serif" font-size="16.4" letter-spacing="3" fill="#D9D7D0">COUNTERTOP SPECIALISTS</text>
+</svg>

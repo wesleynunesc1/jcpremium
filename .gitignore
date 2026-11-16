@@ -1,0 +1,9 @@
+# Reference materials and raw archives
+Webs/
+JC_Premium_Kit_Website.zip
+JC_Premium_Assets/
+
+# Temporary / node / OS files
+node_modules/
+.DS_Store
+Thumbs.db

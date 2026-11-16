@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="136" height="132" viewBox="0 0 136 132"><title>JC Premium monogram</title><g transform="translate(14,5)">
+ <rect x="7" y="5" width="111" height="111" rx="2" fill="none" stroke="#D9BC82" stroke-width="1.7" />
+ <path d="M 31 28 L 70 28 M 60 28 L 60 72 C 60 86 52 94 39 94 C 27 94 20 88 17 80" fill="none" stroke="#F9F7F2" stroke-width="11" stroke-linecap="square" stroke-linejoin="round"/>
+ <path d="M 103 36 C 96 29 86 28 78 33 C 66 40 67 74 80 85 C 88 92 98 88 104 81" fill="none" stroke="#F9F7F2" stroke-width="11" stroke-linecap="square"/>
+ <path d="M 75 21 L 65 37 L 71 42 L 64 62 L 73 69 L 66 84" fill="none" stroke="#D9BC82" stroke-width="2.6" opacity=".84" stroke-linejoin="round"/>
+ </g></svg>

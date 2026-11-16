@@ -1,0 +1,337 @@
+/**
+ * JC PREMIUM LLC — DICTIONARY EN / ES
+ */
+
+const DICT = {
+  en: {
+    // Header & Nav
+    nav_home: "Home",
+    nav_collection: "Stone Collection",
+    nav_sourcing: "Sourcing",
+    nav_countertops: "Countertops",
+    nav_gallery: "Gallery",
+    nav_composition: "Composition",
+    nav_about: "About",
+    nav_contact: "Contact",
+    btn_discuss_project: "DISCUSS A PROJECT",
+    menu_label: "Menu",
+
+    // Hero
+    hero_kicker: "South Florida · Independent Stone Sourcing",
+    hero_h1_part1: "Exceptional Stone.",
+    hero_h1_part2: "Sourced for",
+    hero_h1_italic: "Your Vision.",
+    hero_desc: "Independent natural and engineered stone sourcing for projects across the United States, complemented by specialized countertop services in South Florida.",
+    hero_cta_explore: "EXPLORE OUR COLLECTION",
+    hero_cta_discuss: "DISCUSS YOUR PROJECT",
+
+    // Origin
+    origin_kicker: "01 / STONE SOURCING",
+    origin_h2: "Every Extraordinary Project Begins With the Right Stone.",
+    origin_desc: "At JC Premium, we help clients explore natural and engineered stone options through an independent sourcing network, connecting material preferences with project requirements and available supplier opportunities.",
+    origin_cta: "EXPLORE OUR APPROACH →",
+
+    // Library
+    library_kicker: "02 / CURATED MATERIALS",
+    library_h2: "Stone Library",
+    library_lead: "Distinguished stone categories sourced for architectural, commercial, and bespoke residential spaces.",
+    tag_natural: "Natural",
+    tag_engineered: "Engineered",
+    cat_quartzite: "Quartzite",
+    cat_marble: "Marble",
+    cat_granite: "Granite",
+    cat_dolomite: "Dolomite",
+    cat_quartz: "Quartz",
+
+    // Journey
+    journey_kicker: "03 / THE PROCESS",
+    journey_h2: "From Concept to Project Site.",
+    j1_title: "Project Inquiry",
+    j1_desc: "We begin by reviewing your architectural drawings, elevation plans, design vision, and functional requirements.",
+    j2_title: "Material Preferences",
+    j2_desc: "Identifying preferred tones, veining characteristics, slab thicknesses (2cm / 3cm), and suitable surface finishes.",
+    j3_title: "Supplier Research",
+    j3_desc: "Conducting independent searches across verified distributor reserves in the United States and international quarries in Brazil.",
+    j4_title: "Stone Options",
+    j4_desc: "Presenting high-resolution photographs of individual available slab bundles matching your design specifications.",
+    j5_title: "Material Review",
+    j5_desc: "Collaborative review of lot quality, color harmony, block numbers, and technical characteristics prior to purchase.",
+    j6_title: "Availability Check",
+    j6_desc: "Direct confirmation of current supplier inventory, bundle reserve status, and delivery lead times.",
+    j7_title: "Quotation",
+    j7_desc: "Transparent pricing proposal aligned with project scale, logistical conditions, and delivery parameters.",
+    j8_title: "Next Steps",
+    j8_desc: "Facilitating final material order connections or scheduling South Florida countertop templating.",
+
+    // Gallery
+    gallery_kicker: "04 / VISUAL ARCHIVE",
+    gallery_h2: "Stone, Seen Close.",
+    tag_stone_space: "Architectural Stone Space",
+    tag_quartzite_micro: "Quartzite Microstructure",
+    tag_marble_flow: "Statuario Vein Flow",
+    tag_slab_lot: "Slab Lot Inspection",
+    tag_waterfall_edge: "Mitered Waterfall",
+
+    // Bespoke
+    bespoke_kicker: "05 / BESPOKE CAPABILITIES",
+    bespoke_h2: "Crafted for the Space. Chosen for the Vision.",
+    bespoke_lead: "Explore natural and engineered stone applications, from statement culinary islands to sculpted bathroom suites and architectural surfaces.",
+    bespoke_item1: "Precision laser templating and CNC diamond cutting",
+    bespoke_item2: "Bookmatched waterfall edges with continuous veining",
+    bespoke_item3: "Custom mitered sinks and seamless apron profiles",
+    bespoke_item4: "Full-height architectural fireplace surrounds",
+    bespoke_cta: "REQUEST BESPOKE SPECIFICATIONS →",
+
+    // Bookmatch
+    bookmatch_kicker: "06 / STONE COMPOSITION",
+    bookmatch_h2: "Nature's Patterns as Architecture.",
+    bookmatch_lead: "The direction of the grain and the sequence of the slabs define the room's character. Explore simulated mirrored layouts below; actual bookmatching is coordinated from sequential quarry blocks.",
+    pat_white_marble: "White Marble",
+    pat_black_white: "Black & White",
+    pat_green_onyx: "Green Natural Stone",
+    pat_gemstone: "Crystal Gemstone",
+    pat_black_gold: "Black & Gold",
+    btn_bookmatch: "Bookmatch (2 Slabs)",
+    btn_quadmatch: "Quadmatch (4 Slabs)",
+
+    // Applications
+    app_kicker: "07 / STONE IN CONTEXT",
+    app_h2: "Environments Shaped by Stone.",
+    tab_residential: "Residential",
+    tab_hospitality: "Hospitality",
+    tab_bathrooms: "Bathrooms",
+    tab_kitchens: "Kitchens",
+    tab_commercial: "Commercial",
+    app_res_title: "Private Residences",
+    app_res_text: "Curated natural stone creating serene, enduring luxury across custom culinary spaces, master suites, and grand entrance halls.",
+    app_hosp_title: "Hospitality & Boutiques",
+    app_hosp_text: "Durable marble and quartz surfaces engineered to leave a lasting impression on hotel guests and luxury retail patrons.",
+    app_bath_title: "Architectural Bathrooms",
+    app_bath_text: "Spa-like sanctuaries featuring slab-wrapped walk-in showers, carved stone vanities, and water-sealed natural surfaces.",
+    app_kit_title: "Sculptural Kitchens",
+    app_kit_text: "Heavy-use kitchen worktops, statement islands, and full-height backsplashes built with heat and scratch-resistant quartzite.",
+    app_comm_title: "Commercial & Corporate",
+    app_comm_text: "Executive boardrooms, prestigious corporate lobbies, and statement reception desks crafted from architectural stone.",
+    app_cta: "INQUIRE THIS APPLICATION →",
+
+    // Countertops
+    countertops_kicker: "08 / LOCAL EXPERTISE",
+    countertops_h2: "South Florida Countertop Specialists.",
+    countertops_lead: "Specialized countertop measurement, fabrication, and installation services for residential and commercial applications in South Florida (Palm Beach, Broward, Miami-Dade).",
+    c1_title: "Laser Digital Templating",
+    c1_desc: "Millimeter-precise on-site digital measurements ensuring perfect wall and cabinet fit.",
+    c2_title: "Precision CNC Fabrication",
+    c2_desc: "Waterjet cutting, custom edge profiles, and seamless sink cutouts.",
+    c3_title: "White-Glove Installation",
+    c3_desc: "Dedicated installation craftspeople handling final adjustments and protective sealing.",
+    countertops_cta: "SCHEDULE A MEASUREMENT →",
+
+    // About
+    about_kicker: "09 / THE COMPANY",
+    about_h2_part1: "Independent Expertise.",
+    about_h2_italic: "A Personal Approach.",
+    about_p1: "JC Premium LLC is a South Florida-based stone sourcing and brokerage business focused on helping clients explore natural and engineered stone options through supplier and distributor relationships in the United States and Brazil.",
+    about_p2: "By operating as an independent broker, we are not constrained to a single quarry or distributor inventory. We focus exclusively on matching your project's unique architectural specifications with the finest stone lots available on the market.",
+    guarantee_title: "JC Premium Guarantee",
+    guarantee_desc: "Dedicated stone curation with verified slab photography prior to purchase.",
+
+    // Contact CTA
+    contact_kicker: "10 / INQUIRY",
+    contact_h2: "Have a project in mind?",
+    contact_lead: "Whether sourcing raw slabs across the U.S. or executing custom countertops in South Florida, our specialists are ready to guide your selection.",
+    contact_cta: "DISCUSS A PROJECT →",
+
+    // Modal
+    modal_kicker: "GET IN TOUCH",
+    modal_h2: "Discuss a Project",
+    modal_lead: "Share your vision below to immediately formulate an organized briefing for our stone specialists on WhatsApp (+1 561 931-1858).",
+    modal_name_ph: "Full Name *",
+    modal_company_ph: "Company / Role (Optional)",
+    modal_phone_ph: "Phone Number *",
+    modal_email_ph: "Email Address",
+    modal_location_ph: "City / State",
+    modal_details_ph: "Tell us about your project dimensions, drawings, stone references or timeline...",
+    modal_submit: "CONTINUE ON WHATSAPP →",
+    modal_note: "* Clicking will open WhatsApp with your project parameters structured for review.",
+
+    // Footer
+    footer_desc: "Independent natural stone sourcing, brokerage, and specialized countertop fabrication serving South Florida and nationwide projects.",
+    footer_col_materials: "Materials",
+    footer_col_services: "Services",
+    footer_col_contact: "Contact",
+    footer_service_sourcing: "Stone Sourcing",
+    footer_service_brokerage: "Brokerage Process",
+    footer_service_countertops: "Countertops",
+    footer_service_composition: "Composition",
+    footer_service_about: "About JC Premium",
+    footer_cta_inquiry: "START INQUIRY",
+    footer_rights: "All rights reserved.",
+    footer_tagline: "Independent Stone Supplier, Broker & Countertop Specialists"
+  },
+
+  es: {
+    // Header & Nav
+    nav_home: "Inicio",
+    nav_collection: "Colección de Piedras",
+    nav_sourcing: "Suministro",
+    nav_countertops: "Encimeras",
+    nav_gallery: "Galería",
+    nav_composition: "Composición",
+    nav_about: "Nosotros",
+    nav_contact: "Contacto",
+    btn_discuss_project: "CONSULTAR PROYECTO",
+    menu_label: "Menú",
+
+    // Hero
+    hero_kicker: "Sur de Florida · Suministro Independiente de Piedras",
+    hero_h1_part1: "Piedra Excepcional.",
+    hero_h1_part2: "Obtenida para",
+    hero_h1_italic: "Su Visión.",
+    hero_desc: "Suministro e intermediación independiente de piedras naturales e industrializadas para proyectos en todo Estados Unidos, complementado con servicios especializados de encimeras en el sur de Florida.",
+    hero_cta_explore: "EXPLORAR COLECCIÓN",
+    hero_cta_discuss: "CONSULTAR PROYECTO",
+
+    // Origin
+    origin_kicker: "01 / SUMINISTRO DE PIEDRAS",
+    origin_h2: "Cada Proyecto Extraordinario Comienza con la Piedra Adecuada.",
+    origin_desc: "En JC Premium, ayudamos a los clientes a explorar opciones de piedra natural e industrializada mediante una red independiente de suministro, conectando preferencias estéticas con los requisitos técnicos de su obra.",
+    origin_cta: "CONOZCA NUESTRO ENFOQUE →",
+
+    // Library
+    library_kicker: "02 / MATERIALES SELECTOS",
+    library_h2: "Biblioteca de Piedras",
+    library_lead: "Categorías selectas de piedra natural e industrializada para espacios arquitectónicos, comerciales y residencias de lujo.",
+    tag_natural: "Natural",
+    tag_engineered: "Industrializada",
+    cat_quartzite: "Cuarcita",
+    cat_marble: "Mármol",
+    cat_granite: "Granito",
+    cat_dolomite: "Dolomita",
+    cat_quartz: "Cuarzo",
+
+    // Journey
+    journey_kicker: "03 / EL PROCESO",
+    journey_h2: "Del Concepto a la Obra.",
+    j1_title: "Consulta Inicial",
+    j1_desc: "Analizamos sus planos arquitectónicos, renders, concepto estético y especificaciones funcionales del espacio.",
+    j2_title: "Preferencias de Material",
+    j2_desc: "Definición de tonalidades, intensidad de vetas, espesores requeridos (2cm / 3cm) y acabados superficiales idóneos.",
+    j3_title: "Búsqueda con Proveedores",
+    j3_desc: "Rastreo independiente en depósitos de distribuidores verificados en Estados Unidos y canteras internacionales en Brasil.",
+    j4_title: "Opciones de Tableros",
+    j4_desc: "Presentación de fotografías en alta resolución de lotes y chapas específicas disponibles para su selección.",
+    j5_title: "Revisión Técnica",
+    j5_desc: "Evaluación coordinada de calidad del lote, armonía de color, número de bloque y propiedades mecánicas antes de la compra.",
+    j6_title: "Confirmación de Stock",
+    j6_desc: "Verificación en tiempo real del inventario del proveedor, reserva de lotes y plazos logísticos de entrega.",
+    j7_title: "Cotización Transparente",
+    j7_desc: "Propuesta comercial clara adaptada a la escala de su obra, condiciones de transporte y calendario de instalación.",
+    j8_title: "Siguientes Pasos",
+    j8_desc: "Coordinación final de entrega en obra o programación de mediciones láser para encimeras en el sur de Florida.",
+
+    // Gallery
+    gallery_kicker: "04 / ARCHIVO VISUAL",
+    gallery_h2: "Piedra, Vista de Cerca.",
+    tag_stone_space: "Espacio Arquitectónico en Piedra",
+    tag_quartzite_micro: "Microestructura de Cuarcita",
+    tag_marble_flow: "Flujo de Vetas Statuario",
+    tag_slab_lot: "Inspección de Lote de Chapas",
+    tag_waterfall_edge: "Cascada con Canto a Inglete",
+
+    // Bespoke
+    bespoke_kicker: "05 / CAPACIDADES A MEDIDA",
+    bespoke_h2: "Diseñado para el Espacio. Elegido para su Visión.",
+    bespoke_lead: "Explore aplicaciones en piedra natural e industrializada, desde imponentes islas culinarias hasta baños escultóricos y revestimientos arquitectónicos.",
+    bespoke_item1: "Medición digital láser y corte CNC de alta precisión con diamante",
+    bespoke_item2: "Cantos en cascada bookmatched con continuidad exacta de veta",
+    bespoke_item3: "Fregaderos integrados con ingletes invisibles y frentes macizos",
+    bespoke_item4: "Revestimientos completos para chimeneas arquitectónicas de suelo a techo",
+    bespoke_cta: "SOLICITAR ESPECIFICACIONES A MEDIDA →",
+
+    // Bookmatch
+    bookmatch_kicker: "06 / COMPOSICIÓN DE PIEDRA",
+    bookmatch_h2: "Patrones de la Naturaleza como Arquitectura.",
+    bookmatch_lead: "La dirección del grano y la secuencia de las chapas definen el carácter de la estancia. Explore composiciones simétricas a continuación; el libro abierto real se coordina a partir de bloques secuenciales de cantera.",
+    pat_white_marble: "Mármol Blanco",
+    pat_black_white: "Blanco y Negro",
+    pat_green_onyx: "Piedra Natural Verde",
+    pat_gemstone: "Piedra Preciosa Cristalina",
+    pat_black_gold: "Negro y Dorado",
+    btn_bookmatch: "Libro Abierto (2 Chapas)",
+    btn_quadmatch: "Cuadricromía (4 Chapas)",
+
+    // Applications
+    app_kicker: "07 / LA PIEDRA EN CONTEXTO",
+    app_h2: "Espacios Moldeados por la Piedra.",
+    tab_residential: "Residencial",
+    tab_hospitality: "Hotelería",
+    tab_bathrooms: "Baños",
+    tab_kitchens: "Cocinas",
+    tab_commercial: "Comercial",
+    app_res_title: "Residencias Privadas",
+    app_res_text: "Piedra natural selecta que crea una atmósfera de lujo sereno y atemporal en cocinas de autor, suites principales y vestíbulos señoriales.",
+    app_hosp_title: "Hotelería y Boutiques",
+    app_hosp_text: "Superficies de mármol y cuarzo de alta resistencia, diseñadas para dejar una impresión inolvidable en huéspedes y clientes.",
+    app_bath_title: "Baños Arquitectónicos",
+    app_bath_text: "Santuarios tipo spa con duchas forradas en losas continuas, lavabos monolíticos y sellado hidrófugo integral.",
+    app_kit_title: "Cocinas Escultóricas",
+    app_kit_text: "Bancadas de trabajo de uso intensivo, islas protagonistas y frontales completos elaborados en cuarcita resistente al calor y rayaduras.",
+    app_comm_title: "Corporativo y Comercial",
+    app_comm_text: "Salas de juntas ejecutivas, vestíbulos corporativos de prestigio y mostradores de recepción tallados en piedra arquitectónica.",
+    app_cta: "CONSULTAR ESTA APLICACIÓN →",
+
+    // Countertops
+    countertops_kicker: "08 / ESPECIALISTAS LOCALES",
+    countertops_h2: "Especialistas en Encimeras en el Sur de Florida.",
+    countertops_lead: "Servicios especializados de medición, fabricación e instalación de encimeras para aplicaciones residenciales y comerciales en el sur de Florida (Palm Beach, Broward, Miami-Dade).",
+    c1_title: "Plantillado Digital Láser",
+    c1_desc: "Mediciones digitales milimétricas in situ garantizando un ajuste impecable con paredes y ebanistería.",
+    c2_title: "Fabricación CNC de Precisión",
+    c2_desc: "Corte por chorro de agua, perfiles de cantos personalizados y encastres perfectos para fregaderos.",
+    c3_title: "Instalación de Alta Gama",
+    c3_desc: "Equipo propio de instaladores especializados con sellado protector premium y acabados impecables.",
+    countertops_cta: "PROGRAMAR MEDICIÓN →",
+
+    // About
+    about_kicker: "09 / LA EMPRESA",
+    about_h2_part1: "Experiencia Independiente.",
+    about_h2_italic: "Un Enfoque Personalizado.",
+    about_p1: "JC Premium LLC es una empresa con sede en el sur de Florida dedicada a la intermediación y suministro independiente de piedra natural e industrializada mediante relaciones estratégicas con proveedores en Estados Unidos y Brasil.",
+    about_p2: "Al operar como intermediario independiente, no estamos atados a cuotas exclusivas de una sola cantera. Nos enfocamos exclusivamente en encontrar el lote perfecto para la visión arquitectónica de su obra.",
+    guarantee_title: "Garantía JC Premium",
+    guarantee_desc: "Curaduría dedicada con fotografías verificadas de losas antes de realizar cualquier compra.",
+
+    // Contact CTA
+    contact_kicker: "10 / CONSULTA",
+    contact_h2: "¿Tiene un proyecto en mente?",
+    contact_lead: "Ya sea para el suministro de chapas en todo el territorio de EE.UU. o para la fabricación de encimeras en el sur de Florida, nuestros especialistas están listos para asesorarle.",
+    contact_cta: "CONSULTAR PROYECTO →",
+
+    // Modal
+    modal_kicker: "CONTACTO DIRECTO",
+    modal_h2: "Consulte su Proyecto",
+    modal_lead: "Comparta los detalles de su obra a continuación para formular un resumen directo para nuestros especialistas en WhatsApp (+1 561 931-1858).",
+    modal_name_ph: "Nombre Completo *",
+    modal_company_ph: "Empresa / Rol (Opcional)",
+    modal_phone_ph: "Teléfono de Contacto *",
+    modal_email_ph: "Correo Electrónico",
+    modal_location_ph: "Ciudad / Estado",
+    modal_details_ph: "Indíquenos medidas aproximadas, planos, preferencias de piedra o plazos deseados...",
+    modal_submit: "CONTINUAR EN WHATSAPP →",
+    modal_note: "* Al pulsar se abrirá WhatsApp con los parámetros de su proyecto organizados para revisión.",
+
+    // Footer
+    footer_desc: "Suministro e intermediación independiente de piedra natural y fabricación especializada de encimeras para proyectos en el sur de Florida y todo Estados Unidos.",
+    footer_col_materials: "Materiales",
+    footer_col_services: "Servicios",
+    footer_col_contact: "Contacto",
+    footer_service_sourcing: "Suministro de Piedras",
+    footer_service_brokerage: "Proceso de Intermediación",
+    footer_service_countertops: "Encimeras",
+    footer_service_composition: "Composición",
+    footer_service_about: "Sobre JC Premium",
+    footer_cta_inquiry: "INICIAR CONSULTA",
+    footer_rights: "Todos los derechos reservados.",
+    footer_tagline: "Suministrador, Intermediario de Piedra y Especialistas en Encimeras"
+  }
+};

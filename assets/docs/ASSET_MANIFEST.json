@@ -1,0 +1,188 @@
+{
+  "client": "JC Premium LLC",
+  "total_webp": 26,
+  "assets": [
+    {
+      "path": "branding/jc-monogram.webp",
+      "category": "branding",
+      "type": "conceptual logo",
+      "production_ready": false,
+      "note": "Provisional logo concept; official logo not provided"
+    },
+    {
+      "path": "branding/jc-premium-logo-dark.webp",
+      "category": "branding",
+      "type": "conceptual logo",
+      "production_ready": false,
+      "note": "Provisional logo concept; official logo not provided"
+    },
+    {
+      "path": "branding/jc-premium-logo-light.webp",
+      "category": "branding",
+      "type": "conceptual logo",
+      "production_ready": false,
+      "note": "Provisional logo concept; official logo not provided"
+    },
+    {
+      "path": "branding/jc-premium-logo-stacked.webp",
+      "category": "branding",
+      "type": "conceptual logo",
+      "production_ready": false,
+      "note": "Provisional logo concept; official logo not provided"
+    },
+    {
+      "path": "hero/hero-stone-showroom.webp",
+      "category": "hero",
+      "type": "illustration",
+      "production_ready": false,
+      "note": "Original procedural visual, not a real slab or project photograph"
+    },
+    {
+      "path": "materials/dolomite-detail.webp",
+      "category": "materials",
+      "type": "procedural texture",
+      "production_ready": false,
+      "note": "Original procedural visual, not a real slab or project photograph"
+    },
+    {
+      "path": "materials/dolomite-stone-texture.webp",
+      "category": "materials",
+      "type": "procedural texture",
+      "production_ready": false,
+      "note": "Original procedural visual, not a real slab or project photograph"
+    },
+    {
+      "path": "materials/granite-detail.webp",
+      "category": "materials",
+      "type": "procedural texture",
+      "production_ready": false,
+      "note": "Original procedural visual, not a real slab or project photograph"
+    },
+    {
+      "path": "materials/granite-stone-texture.webp",
+      "category": "materials",
+      "type": "procedural texture",
+      "production_ready": false,
+      "note": "Original procedural visual, not a real slab or project photograph"
+    },
+    {
+      "path": "materials/marble-detail.webp",
+      "category": "materials",
+      "type": "procedural texture",
+      "production_ready": false,
+      "note": "Original procedural visual, not a real slab or project photograph"
+    },
+    {
+      "path": "materials/marble-stone-texture.webp",
+      "category": "materials",
+      "type": "procedural texture",
+      "production_ready": false,
+      "note": "Original procedural visual, not a real slab or project photograph"
+    },
+    {
+      "path": "materials/quartz-detail.webp",
+      "category": "materials",
+      "type": "procedural texture",
+      "production_ready": false,
+      "note": "Original procedural visual, not a real slab or project photograph"
+    },
+    {
+      "path": "materials/quartz-stone-texture.webp",
+      "category": "materials",
+      "type": "procedural texture",
+      "production_ready": false,
+      "note": "Original procedural visual, not a real slab or project photograph"
+    },
+    {
+      "path": "materials/quartzite-detail.webp",
+      "category": "materials",
+      "type": "procedural texture",
+      "production_ready": false,
+      "note": "Original procedural visual, not a real slab or project photograph"
+    },
+    {
+      "path": "materials/quartzite-stone-texture.webp",
+      "category": "materials",
+      "type": "procedural texture",
+      "production_ready": false,
+      "note": "Original procedural visual, not a real slab or project photograph"
+    },
+    {
+      "path": "projects/project-kitchen-granite-concept.webp",
+      "category": "projects",
+      "type": "illustration",
+      "production_ready": false,
+      "note": "Original procedural visual, not a real slab or project photograph"
+    },
+    {
+      "path": "projects/project-warm-dolomite-concept.webp",
+      "category": "projects",
+      "type": "illustration",
+      "production_ready": false,
+      "note": "Original procedural visual, not a real slab or project photograph"
+    },
+    {
+      "path": "sections/editorial-dolomite-macro.webp",
+      "category": "sections",
+      "type": "procedural texture",
+      "production_ready": false,
+      "note": "Original procedural visual, not a real slab or project photograph"
+    },
+    {
+      "path": "sections/editorial-marble-macro.webp",
+      "category": "sections",
+      "type": "procedural texture",
+      "production_ready": false,
+      "note": "Original procedural visual, not a real slab or project photograph"
+    },
+    {
+      "path": "sections/editorial-quartzite-macro.webp",
+      "category": "sections",
+      "type": "procedural texture",
+      "production_ready": false,
+      "note": "Original procedural visual, not a real slab or project photograph"
+    },
+    {
+      "path": "sections/kitchen-waterfall-countertop-concept.webp",
+      "category": "sections",
+      "type": "illustration",
+      "production_ready": false,
+      "note": "Original procedural visual, not a real slab or project photograph"
+    },
+    {
+      "path": "sections/slab-edge-granite.webp",
+      "category": "sections",
+      "type": "illustration",
+      "production_ready": false,
+      "note": "Original procedural visual, not a real slab or project photograph"
+    },
+    {
+      "path": "sections/slab-edge-marble.webp",
+      "category": "sections",
+      "type": "illustration",
+      "production_ready": false,
+      "note": "Original procedural visual, not a real slab or project photograph"
+    },
+    {
+      "path": "sections/slab-edge-quartzite.webp",
+      "category": "sections",
+      "type": "illustration",
+      "production_ready": false,
+      "note": "Original procedural visual, not a real slab or project photograph"
+    },
+    {
+      "path": "sections/stone-interior-installation-concept.webp",
+      "category": "sections",
+      "type": "illustration",
+      "production_ready": false,
+      "note": "Original procedural visual, not a real slab or project photograph"
+    },
+    {
+      "path": "sections/stone-slabs-selection.webp",
+      "category": "sections",
+      "type": "illustration",
+      "production_ready": false,
+      "note": "Original procedural visual, not a real slab or project photograph"
+    }
+  ]
+}
