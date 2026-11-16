@@ -1302,7 +1302,7 @@ main > section.hero::before {
 }
 
 /* ==========================================================================
-   17. CONTACT — MODAL E WHATSAPP
+   17. CONTACT — MODAL & SMS SYSTEM
    ========================================================================== */
 
 .contact-editorial-section {
@@ -1821,6 +1821,36 @@ footer.editorial-footer {
     gap: 12px;
     text-align: center;
   }
+}
+
+/* ==========================================================================
+   SMS INTEGRATION & EDITORIAL ACTIONS
+   ========================================================================== */
+.library-card-action {
+  display: inline-block;
+  margin-top: 10px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.library-card:hover .library-card-action {
+  color: var(--gold-hover);
+  transform: translateX(4px);
+}
+
+.btn-copy-sms {
+  transition: all var(--transition-fast);
+}
+
+.btn-copy-sms:hover {
+  border-color: var(--gold) !important;
+  color: var(--gold-hover) !important;
+  background: rgba(168, 138, 93, 0.08) !important;
 }
 
 /* Reduced Motion preference */

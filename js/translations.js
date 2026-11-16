@@ -1,5 +1,5 @@
 /**
- * JC PREMIUM LLC — DICTIONARY EN / ES
+ * JC PREMIUM LLC — DICTIONARY EN / ES (SMS INTEGRATION)
  */
 
 const DICT = {
@@ -13,7 +13,7 @@ const DICT = {
     nav_composition: "Composition",
     nav_about: "About",
     nav_contact: "Contact",
-    btn_discuss_project: "DISCUSS A PROJECT",
+    btn_header_text_us: "TEXT US →",
     menu_label: "Menu",
 
     // Hero
@@ -23,18 +23,19 @@ const DICT = {
     hero_h1_italic: "Your Vision.",
     hero_desc: "Independent natural and engineered stone sourcing for projects across the United States, complemented by specialized countertop services in South Florida.",
     hero_cta_explore: "EXPLORE OUR COLLECTION",
-    hero_cta_discuss: "DISCUSS YOUR PROJECT",
+    hero_cta_text_us: "TEXT US ABOUT YOUR PROJECT →",
 
     // Origin
     origin_kicker: "01 / STONE SOURCING",
     origin_h2: "Every Extraordinary Project Begins With the Right Stone.",
     origin_desc: "At JC Premium, we help clients explore natural and engineered stone options through an independent sourcing network, connecting material preferences with project requirements and available supplier opportunities.",
-    origin_cta: "EXPLORE OUR APPROACH →",
+    origin_cta_text: "TEXT A STONE SPECIALIST →",
 
     // Library
     library_kicker: "02 / CURATED MATERIALS",
     library_h2: "Stone Library",
     library_lead: "Distinguished stone categories sourced for architectural, commercial, and bespoke residential spaces.",
+    library_card_cta: "ASK ABOUT THIS STONE →",
     tag_natural: "Natural",
     tag_engineered: "Engineered",
     cat_quartzite: "Quartzite",
@@ -80,7 +81,7 @@ const DICT = {
     bespoke_item2: "Bookmatched waterfall edges with continuous veining",
     bespoke_item3: "Custom mitered sinks and seamless apron profiles",
     bespoke_item4: "Full-height architectural fireplace surrounds",
-    bespoke_cta: "REQUEST BESPOKE SPECIFICATIONS →",
+    bespoke_cta: "REQUEST DETAILS VIA TEXT →",
 
     // Bookmatch
     bookmatch_kicker: "06 / STONE COMPOSITION",
@@ -112,7 +113,7 @@ const DICT = {
     app_kit_text: "Heavy-use kitchen worktops, statement islands, and full-height backsplashes built with heat and scratch-resistant quartzite.",
     app_comm_title: "Commercial & Corporate",
     app_comm_text: "Executive boardrooms, prestigious corporate lobbies, and statement reception desks crafted from architectural stone.",
-    app_cta: "INQUIRE THIS APPLICATION →",
+    app_cta: "REQUEST DETAILS VIA TEXT →",
 
     // Countertops
     countertops_kicker: "08 / LOCAL EXPERTISE",
@@ -124,7 +125,7 @@ const DICT = {
     c2_desc: "Waterjet cutting, custom edge profiles, and seamless sink cutouts.",
     c3_title: "White-Glove Installation",
     c3_desc: "Dedicated installation craftspeople handling final adjustments and protective sealing.",
-    countertops_cta: "SCHEDULE A MEASUREMENT →",
+    countertops_cta: "REQUEST A QUOTE VIA TEXT →",
 
     // About
     about_kicker: "09 / THE COMPANY",
@@ -139,20 +140,25 @@ const DICT = {
     contact_kicker: "10 / INQUIRY",
     contact_h2: "Have a project in mind?",
     contact_lead: "Whether sourcing raw slabs across the U.S. or executing custom countertops in South Florida, our specialists are ready to guide your selection.",
-    contact_cta: "DISCUSS A PROJECT →",
+    contact_cta: "SEND VIA SMS →",
 
-    // Modal
-    modal_kicker: "GET IN TOUCH",
-    modal_h2: "Discuss a Project",
-    modal_lead: "Share your vision below to immediately formulate an organized briefing for our stone specialists on WhatsApp (+1 561 931-1858).",
+    // Modal & Direct SMS
+    modal_kicker: "GET IN TOUCH VIA TEXT",
+    modal_h2: "Send Us a Text Message",
+    modal_lead: "Your messaging app will open with your request ready to send to our direct line (+1 561 931-1858).",
     modal_name_ph: "Full Name *",
-    modal_company_ph: "Company / Role (Optional)",
+    modal_company_ph: "Company Name (Optional)",
     modal_phone_ph: "Phone Number *",
-    modal_email_ph: "Email Address",
+    modal_email_ph: "Email Address (Optional)",
     modal_location_ph: "City / State",
     modal_details_ph: "Tell us about your project dimensions, drawings, stone references or timeline...",
-    modal_submit: "CONTINUE ON WHATSAPP →",
-    modal_note: "* Clicking will open WhatsApp with your project parameters structured for review.",
+    modal_submit: "SEND VIA SMS →",
+    modal_note: "* Your messaging app will open with your request ready to send. You can review before transmitting.",
+    modal_desktop_fallback: "SMS is not available on this device? Click below to copy our direct phone number.",
+    btn_copy_number: "COPY NUMBER",
+    btn_copy_msg: "COPY MESSAGE",
+    number_copied: "Number copied: +1 (561) 931-1858",
+    msg_copied: "Message copied to clipboard!",
 
     // Footer
     footer_desc: "Independent natural stone sourcing, brokerage, and specialized countertop fabrication serving South Florida and nationwide projects.",
@@ -164,7 +170,7 @@ const DICT = {
     footer_service_countertops: "Countertops",
     footer_service_composition: "Composition",
     footer_service_about: "About JC Premium",
-    footer_cta_inquiry: "START INQUIRY",
+    footer_cta_text_us: "TEXT US →",
     footer_rights: "All rights reserved.",
     footer_tagline: "Independent Stone Supplier, Broker & Countertop Specialists"
   },
@@ -179,7 +185,7 @@ const DICT = {
     nav_composition: "Composición",
     nav_about: "Nosotros",
     nav_contact: "Contacto",
-    btn_discuss_project: "CONSULTAR PROYECTO",
+    btn_header_text_us: "ENVIAR SMS →",
     menu_label: "Menú",
 
     // Hero
@@ -189,18 +195,19 @@ const DICT = {
     hero_h1_italic: "Su Visión.",
     hero_desc: "Suministro e intermediación independiente de piedras naturales e industrializadas para proyectos en todo Estados Unidos, complementado con servicios especializados de encimeras en el sur de Florida.",
     hero_cta_explore: "EXPLORAR COLECCIÓN",
-    hero_cta_discuss: "CONSULTAR PROYECTO",
+    hero_cta_text_us: "ENVÍENOS UN SMS SOBRE SU PROYECTO →",
 
     // Origin
     origin_kicker: "01 / SUMINISTRO DE PIEDRAS",
     origin_h2: "Cada Proyecto Extraordinario Comienza con la Piedra Adecuada.",
     origin_desc: "En JC Premium, ayudamos a los clientes a explorar opciones de piedra natural e industrializada mediante una red independiente de suministro, conectando preferencias estéticas con los requisitos técnicos de su obra.",
-    origin_cta: "CONOZCA NUESTRO ENFOQUE →",
+    origin_cta_text: "ENVIAR SMS A UN ESPECIALISTA →",
 
     // Library
     library_kicker: "02 / MATERIALES SELECTOS",
     library_h2: "Biblioteca de Piedras",
     library_lead: "Categorías selectas de piedra natural e industrializada para espacios arquitectónicos, comerciales y residencias de lujo.",
+    library_card_cta: "CONSULTAR POR SMS →",
     tag_natural: "Natural",
     tag_engineered: "Industrializada",
     cat_quartzite: "Cuarcita",
@@ -246,7 +253,7 @@ const DICT = {
     bespoke_item2: "Cantos en cascada bookmatched con continuidad exacta de veta",
     bespoke_item3: "Fregaderos integrados con ingletes invisibles y frentes macizos",
     bespoke_item4: "Revestimientos completos para chimeneas arquitectónicas de suelo a techo",
-    bespoke_cta: "SOLICITAR ESPECIFICACIONES A MEDIDA →",
+    bespoke_cta: "SOLICITAR DETALLES POR SMS →",
 
     // Bookmatch
     bookmatch_kicker: "06 / COMPOSICIÓN DE PIEDRA",
@@ -278,7 +285,7 @@ const DICT = {
     app_kit_text: "Bancadas de trabajo de uso intensivo, islas protagonistas y frontales completos elaborados en cuarcita resistente al calor y rayaduras.",
     app_comm_title: "Corporativo y Comercial",
     app_comm_text: "Salas de juntas ejecutivas, vestíbulos corporativos de prestigio y mostradores de recepción tallados en piedra arquitectónica.",
-    app_cta: "CONSULTAR ESTA APLICACIÓN →",
+    app_cta: "SOLICITAR DETALLES POR SMS →",
 
     // Countertops
     countertops_kicker: "08 / ESPECIALISTAS LOCALES",
@@ -290,7 +297,7 @@ const DICT = {
     c2_desc: "Corte por chorro de agua, perfiles de cantos personalizados y encastres perfectos para fregaderos.",
     c3_title: "Instalación de Alta Gama",
     c3_desc: "Equipo propio de instaladores especializados con sellado protector premium y acabados impecables.",
-    countertops_cta: "PROGRAMAR MEDICIÓN →",
+    countertops_cta: "SOLICITAR COTIZACIÓN POR SMS →",
 
     // About
     about_kicker: "09 / LA EMPRESA",
@@ -305,20 +312,25 @@ const DICT = {
     contact_kicker: "10 / CONSULTA",
     contact_h2: "¿Tiene un proyecto en mente?",
     contact_lead: "Ya sea para el suministro de chapas en todo el territorio de EE.UU. o para la fabricación de encimeras en el sur de Florida, nuestros especialistas están listos para asesorarle.",
-    contact_cta: "CONSULTAR PROYECTO →",
+    contact_cta: "ENVIAR POR SMS →",
 
-    // Modal
-    modal_kicker: "CONTACTO DIRECTO",
-    modal_h2: "Consulte su Proyecto",
-    modal_lead: "Comparta los detalles de su obra a continuación para formular un resumen directo para nuestros especialistas en WhatsApp (+1 561 931-1858).",
+    // Modal & Direct SMS
+    modal_kicker: "CONTACTO POR MENSAJE DE TEXTO",
+    modal_h2: "Envíenos un SMS",
+    modal_lead: "Su aplicación de mensajería se abrirá con su consulta lista para enviar a nuestra línea directa (+1 561 931-1858).",
     modal_name_ph: "Nombre Completo *",
-    modal_company_ph: "Empresa / Rol (Opcional)",
+    modal_company_ph: "Empresa (Opcional)",
     modal_phone_ph: "Teléfono de Contacto *",
-    modal_email_ph: "Correo Electrónico",
+    modal_email_ph: "Correo Electrónico (Opcional)",
     modal_location_ph: "Ciudad / Estado",
     modal_details_ph: "Indíquenos medidas aproximadas, planos, preferencias de piedra o plazos deseados...",
-    modal_submit: "CONTINUAR EN WHATSAPP →",
-    modal_note: "* Al pulsar se abrirá WhatsApp con los parámetros de su proyecto organizados para revisión.",
+    modal_submit: "ENVIAR POR SMS →",
+    modal_note: "* Su aplicación de mensajes se abrirá con los parámetros de su obra listos para enviar. Podrá revisarlo antes de transmitir.",
+    modal_desktop_fallback: "¿El SMS no está disponible en este dispositivo? Pulse abajo para copiar nuestro número directo.",
+    btn_copy_number: "COPIAR NÚMERO",
+    btn_copy_msg: "COPIAR MENSAJE",
+    number_copied: "Número copiado: +1 (561) 931-1858",
+    msg_copied: "¡Mensaje copiado al portapapeles!",
 
     // Footer
     footer_desc: "Suministro e intermediación independiente de piedra natural y fabricación especializada de encimeras para proyectos en el sur de Florida y todo Estados Unidos.",
@@ -330,8 +342,9 @@ const DICT = {
     footer_service_countertops: "Encimeras",
     footer_service_composition: "Composición",
     footer_service_about: "Sobre JC Premium",
-    footer_cta_inquiry: "INICIAR CONSULTA",
+    footer_cta_text_us: "ENVIAR SMS →",
     footer_rights: "Todos los derechos reservados.",
     footer_tagline: "Suministrador, Intermediario de Piedra y Especialistas en Encimeras"
   }
 };
+

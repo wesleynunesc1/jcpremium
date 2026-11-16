@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initAppTabs();
   initHorizontalGallery();
   initContactModal();
+  initSmsTriggers();
   initInteractiveLighting();
 });
 
@@ -335,19 +336,115 @@ function initAppTabs() {
 }
 
 /* ==========================================================================
-   17. CONTACT — MODAL E WHATSAPP
+   17. CONTACT — MODAL, SMS DISPATCHER & NATIVE MESSAGING
    ========================================================================== */
+const SMS_PHONE = '+15619311858';
+const SMS_PHONE_DISPLAY = '+1 (561) 931-1858';
+
+/**
+ * Native SMS launcher with iOS (&body=) vs Android/Desktop (?body=) compatibility
+ */
+function sendSMS(messageText) {
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || 
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  const separator = isIOS ? '&' : '?';
+  const encodedBody = encodeURIComponent(messageText);
+  const smsUrl = `sms:${SMS_PHONE}${separator}body=${encodedBody}`;
+  
+  // Trigger system SMS client
+  window.location.href = smsUrl;
+}
+
+/**
+ * Build formatted inquiry message template matching JC Premium standard
+ */
+function buildContactInquiryMessage(data) {
+  return [
+    'JC PREMIUM — NEW PROJECT INQUIRY',
+    '',
+    'Hello! I would like to discuss a project with JC Premium.',
+    '',
+    `Name: ${data.name || ''}`,
+    data.company ? `Company: ${data.company}` : null,
+    `Phone: ${data.phone || ''}`,
+    data.email ? `Email: ${data.email}` : null,
+    data.location ? `Location: ${data.location}` : null,
+    '',
+    `Inquiry: ${data.inquiryType || 'Stone Sourcing'}`,
+    data.category ? `Stone: ${data.category}` : null,
+    data.material ? `Material: ${data.material}` : null,
+    '',
+    'Project Details:',
+    data.details ? data.details : 'Requesting consultation on available slab lots and project specifications.',
+    '',
+    'I look forward to hearing from your team.'
+  ].filter(line => line !== null).join('\n');
+}
+
+/**
+ * Handle direct contextual SMS triggers across all sections
+ */
+function initSmsTriggers() {
+  const triggers = document.querySelectorAll('[data-sms-trigger]');
+
+  triggers.forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      const type = trigger.getAttribute('data-sms-trigger');
+      const stoneName = trigger.getAttribute('data-stone') || '';
+
+      let message = '';
+
+      switch (type) {
+        case 'header':
+        case 'footer':
+          message = "Hello JC Premium! I'd like to discuss a stone project.";
+          break;
+        case 'hero':
+          message = "Hello JC Premium! I'd like to discuss a stone project.";
+          break;
+        case 'sourcing':
+          message = "Hello JC Premium! I need assistance sourcing stone for a project.";
+          break;
+        case 'material':
+          message = `Hello JC Premium! I'm interested in ${stoneName || 'curated stone'}. Could you share more details?`;
+          break;
+        case 'bespoke':
+          message = "Hello JC Premium! I'd like to request details about custom stone applications.";
+          break;
+        case 'applications':
+          message = "Hello JC Premium! I'd like to request details about custom stone applications.";
+          break;
+        case 'countertops':
+          message = "Hello JC Premium! I'd like to request a quote for a countertop project.";
+          break;
+        case 'contact':
+          message = "Hello JC Premium! I'd like to discuss a new project.";
+          break;
+        default:
+          message = "Hello JC Premium! I'd like to discuss a stone project.";
+      }
+
+      sendSMS(message);
+    });
+  });
+}
+
 function initContactModal() {
   const openButtons = document.querySelectorAll('[data-open-modal]');
   const modalOverlay = document.getElementById('contactModal');
   const closeBtn = document.querySelector('.modal-close-btn');
   const form = document.getElementById('modalContactForm');
+  const btnCopyNumber = document.getElementById('btnCopyNumber');
+  const btnCopyMessage = document.getElementById('btnCopyMessage');
+  const copyFeedback = document.getElementById('copyFeedback');
 
   if (!modalOverlay) return;
 
   const openModal = () => {
     modalOverlay.classList.add('open');
     document.body.style.overflow = 'hidden';
+    if (copyFeedback) copyFeedback.textContent = '';
   };
 
   const closeModal = () => {
@@ -371,37 +468,79 @@ function initContactModal() {
     }
   });
 
+  const getFormData = () => ({
+    name: document.getElementById('modalName')?.value.trim() || '',
+    company: document.getElementById('modalCompany')?.value.trim() || '',
+    phone: document.getElementById('modalPhone')?.value.trim() || '',
+    email: document.getElementById('modalEmail')?.value.trim() || '',
+    location: document.getElementById('modalLocation')?.value.trim() || '',
+    inquiryType: document.getElementById('modalType')?.value || '',
+    category: document.getElementById('modalCategory')?.value || '',
+    details: document.getElementById('modalDetails')?.value.trim() || ''
+  });
+
+  // Copy Phone Number fallback
+  btnCopyNumber?.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(SMS_PHONE_DISPLAY);
+      if (copyFeedback) {
+        copyFeedback.textContent = currentLanguage === 'es' 
+          ? `✓ Número copiado: ${SMS_PHONE_DISPLAY}` 
+          : `✓ Number copied: ${SMS_PHONE_DISPLAY}`;
+      }
+    } catch (err) {
+      if (copyFeedback) copyFeedback.textContent = SMS_PHONE_DISPLAY;
+    }
+  });
+
+  // Copy Structured Message fallback
+  btnCopyMessage?.addEventListener('click', async () => {
+    const data = getFormData();
+    const msg = buildContactInquiryMessage(data);
+    try {
+      await navigator.clipboard.writeText(msg);
+      if (copyFeedback) {
+        copyFeedback.textContent = currentLanguage === 'es'
+          ? '✓ Mensaje copiado al portapapeles'
+          : '✓ Message copied to clipboard';
+      }
+    } catch (err) {
+      if (copyFeedback) copyFeedback.textContent = 'Please copy text manually.';
+    }
+  });
+
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      const name = document.getElementById('modalName')?.value.trim();
-      const company = document.getElementById('modalCompany')?.value.trim();
-      const phone = document.getElementById('modalPhone')?.value.trim();
-      const email = document.getElementById('modalEmail')?.value.trim();
-      const location = document.getElementById('modalLocation')?.value.trim();
-      const inquiryType = document.getElementById('modalType')?.value;
-      const category = document.getElementById('modalCategory')?.value;
-      const details = document.getElementById('modalDetails')?.value.trim();
+      const data = getFormData();
 
-      if (!name || !phone) {
-        alert('Please provide your name and phone number.');
+      if (!data.name || !data.phone) {
+        alert(currentLanguage === 'es' 
+          ? 'Por favor ingrese su nombre y teléfono.' 
+          : 'Please provide your name and phone number.');
         return;
       }
 
-      let msg = `Hello JC Premium,\n\nI would like to discuss a project:\n`;
-      msg += `• Name: ${name}\n`;
-      if (company) msg += `• Company / Role: ${company}\n`;
-      msg += `• Phone: ${phone}\n`;
-      if (email) msg += `• Email: ${email}\n`;
-      if (location) msg += `• Location: ${location}\n`;
-      if (inquiryType) msg += `• Inquiry Scope: ${inquiryType}\n`;
-      if (category) msg += `• Preferred Material: ${category}\n`;
-      if (details) msg += `• Project Vision: ${details}\n`;
+      const msg = buildContactInquiryMessage(data);
 
-      const whatsappUrl = `https://wa.me/15619311858?text=${encodeURIComponent(msg)}`;
-      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-      closeModal();
+      // Launch native SMS
+      sendSMS(msg);
+
+      // Also copy to clipboard in case device does not link SMS client
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(msg).catch(() => {});
+      }
+
+      if (copyFeedback) {
+        copyFeedback.textContent = currentLanguage === 'es' 
+          ? 'Abriendo SMS...' 
+          : 'Opening messaging app...';
+      }
+
+      setTimeout(() => {
+        closeModal();
+      }, 1200);
     });
   }
 }

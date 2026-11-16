@@ -77,8 +77,8 @@
         </button>
       </div>
 
-      <a href="#contact" class="btn-editorial-light" data-open-modal style="padding: 10px 18px;" data-i18n="btn_discuss_project">
-        DISCUSS A PROJECT
+      <a href="#contact" class="btn-editorial-light" data-sms-trigger="header" data-i18n="btn_header_text_us">
+        TEXT US &rarr;
       </a>
 
       <button class="menu-btn" aria-label="Toggle mobile menu" aria-expanded="false" data-i18n="menu_label">
@@ -104,8 +104,8 @@
         </p>
 
         <div class="hero-buttons">
-          <a href="#library" class="btn-editorial">EXPLORE OUR COLLECTION</a>
-          <a href="#contact" class="btn-editorial-outline" data-open-modal>DISCUSS YOUR PROJECT</a>
+          <a href="#library" class="btn-editorial" data-i18n="hero_cta_explore">EXPLORE OUR COLLECTION</a>
+          <a href="#contact" class="btn-editorial-outline" data-sms-trigger="hero" data-i18n="hero_cta_text_us">TEXT US ABOUT YOUR PROJECT &rarr;</a>
         </div>
       </div>
 
@@ -126,8 +126,8 @@
           At JC Premium, we help clients explore natural and engineered stone options through an independent sourcing
           network, connecting material preferences with project requirements and available supplier opportunities.
         </p>
-        <a href="#journey" class="editorial-arrow-link">
-          EXPLORE OUR APPROACH &rarr;
+        <a href="#contact" class="editorial-arrow-link" data-sms-trigger="sourcing" data-i18n="origin_cta_text">
+          TEXT A STONE SPECIALIST &rarr;
         </a>
       </div>
 
@@ -150,47 +150,52 @@
 
       <div class="library-grid">
         <!-- 01 Quartzite -->
-        <article class="library-card" data-open-modal>
+        <article class="library-card" data-sms-trigger="material" data-stone="Quartzite">
           <img src="assets/materials/quartzite-stone-texture.webp" alt="Quartzite Slabs" loading="lazy">
           <div class="library-card-caption">
             <span class="library-card-num">01 / Natural</span>
             <h3 class="library-card-name">Quartzite</h3>
+            <span class="library-card-action" data-i18n="library_card_cta">ASK ABOUT THIS STONE &rarr;</span>
           </div>
         </article>
 
         <!-- 02 Marble -->
-        <article class="library-card" data-open-modal>
+        <article class="library-card" data-sms-trigger="material" data-stone="Marble">
           <img src="assets/materials/marble-stone-texture.webp" alt="Marble Slabs" loading="lazy">
           <div class="library-card-caption">
             <span class="library-card-num">02 / Natural</span>
             <h3 class="library-card-name">Marble</h3>
+            <span class="library-card-action" data-i18n="library_card_cta">ASK ABOUT THIS STONE &rarr;</span>
           </div>
         </article>
 
         <!-- 03 Granite -->
-        <article class="library-card" data-open-modal>
+        <article class="library-card" data-sms-trigger="material" data-stone="Granite">
           <img src="assets/materials/granite-stone-texture.webp" alt="Granite Slabs" loading="lazy">
           <div class="library-card-caption">
             <span class="library-card-num">03 / Natural</span>
             <h3 class="library-card-name">Granite</h3>
+            <span class="library-card-action" data-i18n="library_card_cta">ASK ABOUT THIS STONE &rarr;</span>
           </div>
         </article>
 
         <!-- 04 Dolomite -->
-        <article class="library-card" data-open-modal>
+        <article class="library-card" data-sms-trigger="material" data-stone="Dolomite">
           <img src="assets/materials/dolomite-stone-texture.webp" alt="Dolomite Slabs" loading="lazy">
           <div class="library-card-caption">
             <span class="library-card-num">04 / Natural</span>
             <h3 class="library-card-name">Dolomite</h3>
+            <span class="library-card-action" data-i18n="library_card_cta">ASK ABOUT THIS STONE &rarr;</span>
           </div>
         </article>
 
         <!-- 05 Quartz -->
-        <article class="library-card" data-open-modal>
+        <article class="library-card" data-sms-trigger="material" data-stone="Quartz">
           <img src="assets/materials/quartz-stone-texture.webp" alt="Engineered Quartz" loading="lazy">
           <div class="library-card-caption">
             <span class="library-card-num">05 / Engineered</span>
             <h3 class="library-card-name">Quartz</h3>
+            <span class="library-card-action" data-i18n="library_card_cta">ASK ABOUT THIS STONE &rarr;</span>
           </div>
         </article>
       </div>
@@ -352,9 +357,9 @@
         </div>
 
         <div>
-          <a href="#contact" class="btn-editorial-light" data-open-modal>
-            REQUEST BESPOKE SPECIFICATIONS &rarr;
-          </a>
+          <button type="button" class="btn-editorial-light" data-sms-trigger="bespoke" data-i18n="bespoke_cta">
+            REQUEST DETAILS VIA TEXT &rarr;
+          </button>
         </div>
       </div>
     </section>
@@ -452,7 +457,7 @@
           <h3 id="app-label">Private Residences</h3>
           <p id="app-text">Curated natural stone creating serene, enduring luxury across custom culinary spaces, master
             suites, and grand entrance halls.</p>
-          <a href="#contact" class="btn-editorial-light" data-open-modal>INQUIRE THIS APPLICATION &rarr;</a>
+          <button type="button" class="btn-editorial-light" data-sms-trigger="applications" data-i18n="app_cta">REQUEST DETAILS VIA TEXT &rarr;</button>
         </div>
       </div>
     </section>
@@ -498,9 +503,9 @@
             </li>
           </ul>
 
-          <a href="#contact" class="btn-editorial-light" data-open-modal>
-            SCHEDULE A MEASUREMENT &rarr;
-          </a>
+          <button type="button" class="btn-editorial-light" data-sms-trigger="countertops" data-i18n="countertops_cta">
+            REQUEST A QUOTE VIA TEXT &rarr;
+          </button>
         </div>
 
         <div>
@@ -576,8 +581,8 @@
           </p>
         </div>
         <div>
-          <button class="btn-editorial" data-open-modal style="white-space: nowrap;">
-            DISCUSS A PROJECT &rarr;
+          <button class="btn-editorial" data-open-modal data-i18n="contact_cta" style="white-space: nowrap;">
+            SEND VIA SMS &rarr;
           </button>
         </div>
       </div>
@@ -591,11 +596,10 @@
     aria-label="Discuss a project modal">
     <div class="contact-modal-sheet">
       <button class="modal-close-btn" aria-label="Close modal">&times;</button>
-      <div class="kicker">GET IN TOUCH</div>
-      <h2 style="font-size: 38px; margin-bottom: 12px;">Discuss a Project</h2>
-      <p style="color: var(--muted); font-size: 14px; margin-bottom: 24px;">
-        Share your vision below to immediately formulate an organized briefing for our stone specialists on WhatsApp (+1
-        561 931-1858).
+      <div class="kicker" data-i18n="modal_kicker">GET IN TOUCH VIA TEXT</div>
+      <h2 style="font-size: 38px; margin-bottom: 12px;" data-i18n="modal_h2">Send Us a Text Message</h2>
+      <p style="color: var(--muted); font-size: 14px; margin-bottom: 24px;" data-i18n="modal_lead">
+        Your messaging app will open with your request ready to send to our direct line (+1 561 931-1858).
       </p>
 
       <form id="modalContactForm">
@@ -647,12 +651,28 @@
         </div>
 
         <div style="margin-top: 24px; display: flex; flex-direction: column; gap: 12px;">
-          <button type="submit" class="btn-editorial" style="width: 100%;">
-            CONTINUE ON WHATSAPP &rarr;
+          <button type="submit" class="btn-editorial" style="width: 100%;" data-i18n="modal_submit">
+            SEND VIA SMS &rarr;
           </button>
-          <small style="color: var(--muted); font-size: 11px; text-align: center;">
-            * Clicking will open WhatsApp with your project parameters structured for review.
+          <small style="color: var(--muted); font-size: 11px; text-align: center;" data-i18n="modal_note">
+            * Your messaging app will open with your request ready to send. You can review before transmitting.
           </small>
+        </div>
+
+        <!-- Desktop Fallback / Quick Copy UI -->
+        <div class="modal-sms-fallback" style="margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); text-align: center;">
+          <p style="font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;" data-i18n="modal_desktop_fallback">
+            SMS is not available on this device? Click below to copy our direct phone number.
+          </p>
+          <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+            <button type="button" class="btn-copy-sms" id="btnCopyNumber" style="background: transparent; border: 1px solid var(--border); color: var(--gold); padding: 8px 14px; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; border-radius: 2px;">
+              <span data-i18n="btn_copy_number">COPY NUMBER</span> (+1 561 931-1858)
+            </button>
+            <button type="button" class="btn-copy-sms" id="btnCopyMessage" style="background: transparent; border: 1px solid var(--border); color: var(--text); padding: 8px 14px; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; border-radius: 2px;" data-i18n="btn_copy_msg">
+              COPY MESSAGE
+            </button>
+          </div>
+          <span id="copyFeedback" style="display: block; font-size: 11px; color: var(--gold); margin-top: 6px; min-height: 16px;"></span>
         </div>
       </form>
     </div>
@@ -701,14 +721,14 @@
         </div>
 
         <div class="footer-col">
-          <h5>Contact</h5>
+          <h5 data-i18n="footer_col_contact">Contact</h5>
           <p style="color: var(--white); font-size: 13px; margin-bottom: 8px;">JC Premium LLC</p>
           <p style="font-size: 13px; margin-bottom: 12px; color: #a9a59e;">South Florida, USA</p>
           <p style="font-size: 13px; color: var(--gold); margin-bottom: 20px;">
-            <a href="https://wa.me/15619311858" target="_blank" rel="noopener noreferrer">+1 (561) 931-1858</a>
+            <a href="tel:+15619311858">+1 (561) 931-1858</a>
           </p>
-          <button class="btn-editorial-light" data-open-modal style="padding: 8px 16px; font-size: 10px;">
-            START INQUIRY
+          <button class="btn-editorial-light" data-sms-trigger="footer" data-i18n="footer_cta_text_us" style="padding: 8px 16px; font-size: 10px;">
+            TEXT US &rarr;
           </button>
         </div>
       </div>
